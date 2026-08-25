@@ -253,7 +253,7 @@ html{scroll-behavior:smooth}
 
 @media (max-width:760px){
   .hero-grid{grid-template-columns:1fr;gap:2.25rem}
-  .book-frame{max-width:340px;margin-inline:auto}
+  .book-frame{width:100%;max-width:340px;margin-inline:auto}
 }
 @media (prefers-reduced-motion:reduce){
   .scroll-cue span{animation:none}
