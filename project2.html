@@ -3,81 +3,130 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Major Project 2 — Michael Wong</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<title>The Interview — Michael Wong</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%98%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="c-ochre">
 
-<nav>
-  <div class="wrap nav-inner">
-    <a class="nav-name" href="index.html">Michael Wong</a>
+<nav class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html">Michael Wong</a>
     <a class="tab" href="index.html">Home</a>
-    <a class="tab" href="project1.html">Major Project 1</a>
-    <a class="tab" href="project2.html" aria-current="page">Major Project 2</a>
-    <a class="tab" href="project3.html">Major Project 3</a>
-    <a class="tab" href="extras.html">Extras</a>
+    <a class="tab" href="project1.html">Field Notes</a>
+    <a class="tab" href="project2.html" aria-current="page">The Interview</a>
+    <a class="tab" href="project3.html">What Changed</a>
+    <a class="tab" href="extras.html">Process Work</a>
   </div>
 </nav>
 
-<header class="wrap">
-  <p class="eyebrow">Major Project 2 · Due 19 November 2026</p>
-  <h1>How Writing Works</h1>
-  <p class="lede"><span class="todo">One or two sentences: who you interviewed, and the one thing about their writing process that surprised you.</span></p>
+<header class="wrap masthead-grid">
+  <div>
+    <h1>The Interview</h1>
+    <p class="official">How Writing Works</p>
+    <p class="bio">I interviewed a writer about how they actually write, and compared it to how I thought writing worked.</p>
+  </div>
+  <dl class="metablock">
+    <dt>Deadline</dt><dd>Due 19 November 2026</dd>
+    <dt>Course</dt><dd>ENC 1101 Composition I</dd>
+    <dt>Instructor</dt><dd>Professor Pamela Baker</dd>
+  </dl>
 </header>
 
-<main>
-  <section class="wrap">
-    <p class="sec-label">The Project</p>
-    <h2>Final draft</h2>
-    <p>The finished piece is embedded below, so it can be read right on this page without downloading anything.</p>
-    <div class="card">
-      <div class="card-top">
-        <h3>Major Project 2 (PDF)</h3>
-        <span class="chip">Not uploaded yet</span>
+<div class="wrap bookwrap">
+  <div class="bookrow">
+    <button class="pager pager-prev" type="button" aria-label="Previous page">&larr;</button>
+  <div class="book" id="book">
+    <div class="book-stage">
+      <div class="leafpage left"><div class="pagebody page-l"></div></div>
+      <div class="leafpage right"><div class="pagebody page-r"></div></div>
+      <div class="gutter"></div>
+      <div class="turner">
+        <div class="turner-face turner-front pagebody"></div>
+        <div class="turner-face turner-back pagebody"></div>
       </div>
-      <p><span class="todo">Send me the finished PDF and I will embed it here, viewable right on the page — no download, no blind link.</span></p>
+      <div class="cover">
+        <div class="cover-face cover-front">
+          <p class="cover-title">The&nbsp;Interview</p>
+          <hr class="cover-rule">
+          <p class="cover-sub">Michael Wong<br>ENC 1101 · Fall 2026</p>
+        </div>
+        <div class="cover-face cover-back"></div>
+      </div>
     </div>
-    <!-- Once files/major-project-2.pdf exists, replace the card above with:
-    <figure>
-      <iframe class="pdf" src="files/major-project-2.pdf" title="Major Project 2 final draft"></iframe>
-      <figcaption>Trouble viewing? <a href="files/major-project-2.pdf">Open the PDF directly</a>.</figcaption>
-    </figure>
-    -->
-  </section>
+    <div class="book-shadow"></div>
+  </div>
+    <button class="pager pager-next" type="button" aria-label="Next page">&rarr;</button>
+  </div>
 
-  <section class="wrap">
-    <p class="sec-label">Evidence</p>
-    <h2>Process work</h2>
-    <ul class="stack">
-      <li>
-        <h3>Interview preparation</h3>
-        <p><span class="todo">Your question list, and why you chose those questions.</span></p>
-      </li>
-      <li>
-        <h3>Interview recording or notes</h3>
-        <p><span class="todo">Embed the audio or video, or add photos of your notes.</span></p>
-      </li>
-      <li>
-        <h3>Drafts and revision</h3>
-        <p><span class="todo">Show the earlier draft next to the final, and name one change you made on purpose.</span></p>
-      </li>
-    </ul>
-  </section>
+  <p class="counter" aria-live="polite">Cover</p>
 
-  <section class="wrap">
-    <p class="sec-label">Reflection</p>
-    <h2>What this project taught me</h2>
-    <p><span class="todo">Your own words. Genre, audience, and the decisions you made for both.</span></p>
-  </section>
-</main>
+  <div class="actions">
+    <button class="btn ghost flatlink" type="button" aria-expanded="false"
+            data-open="Read the whole thing on one page"
+            data-close="Hide the one-page version">Read the whole thing on one page</button>
+    <span class="btn" aria-disabled="true">PDF not uploaded yet</span>
+  </div>
+</div>
 
-<footer class="wrap">
-  <p>Michael Wong · ENC 1101 Composition I · Fall 2026 · Department of Writing and Rhetoric, University of Central Florida</p>
+<section class="wrap contents">
+  <h2>Contents</h2>
+  <ol class="toc">
+    <li><button type="button" data-spread="0"><span class="n">I</span><span class="t">Who I interviewed</span><span class="dots"></span><span class="pg">p. 1</span></button></li>
+    <li><button type="button" data-spread="0"><span class="n">II</span><span class="t">What surprised me</span><span class="dots"></span><span class="pg">p. 2</span></button></li>
+    <li><button type="button" data-spread="1"><span class="n">III</span><span class="t">Genre and audience</span><span class="dots"></span><span class="pg">p. 3</span></button></li>
+    <li><button type="button" data-spread="1"><span class="n">IV</span><span class="t">What revision changed</span><span class="dots"></span><span class="pg">p. 4</span></button></li>
+  </ol>
+</section>
+
+<div class="spreads" hidden>
+  <div class="spread">
+    <div class="side-l">
+      <h2>Who I interviewed</h2>
+      <p class="pending">Who they are, and why their writing process was worth asking about.</p>
+      <p class="folio">1</p>
+    </div>
+    <div class="side-r">
+      <h2>What surprised me</h2>
+      <p class="pending">The one thing that did not match what I expected.</p>
+      <p class="folio">2</p>
+    </div>
+  </div>
+  <div class="spread">
+    <div class="side-l">
+      <h2>Genre and audience</h2>
+      <p class="pending">The decisions they make for a specific reader, and the constraints behind them.</p>
+      <p class="folio">3</p>
+    </div>
+    <div class="side-r">
+      <h2>What revision changed</h2>
+      <p class="pending">The feedback I got, what I did with it, and what I chose to ignore.</p>
+      <p class="folio">4</p>
+    </div>
+  </div>
+</div>
+
+<section class="wrap flat" hidden>
+  <h2>Who I interviewed</h2>
+  <p class="pending">Who they are, and why their writing process was worth asking about.</p>
+
+  <h2>What surprised me</h2>
+  <p class="pending">The one thing that did not match what I expected.</p>
+
+  <h2>Genre and audience</h2>
+  <p class="pending">The decisions they make for a specific reader, and the constraints behind them.</p>
+
+  <h2>What revision changed</h2>
+  <p class="pending">The feedback I got, what I did with it, and what I chose to ignore.</p>
+</section>
+
+<footer class="wrap sitefoot">
+  <p>Michael Wong · ENC 1101 Composition I · Fall 2026 · Instructor: Professor Pamela Baker · Department of Writing and Rhetoric, University of Central Florida</p>
 </footer>
 
+<script src="book.js"></script>
 </body>
 </html>

@@ -1,0 +1,405 @@
+/* ============================================================
+   Michael Wong — ENC 1101 ePortfolio
+   The site is the shelf. The book is the book.
+   Body text is 1.35rem = 21.6px = 16.2pt, clears the 16pt minimum.
+   ============================================================ */
+
+:root{
+  --paper:#FFFFFF;
+  --ink:#15181B;
+  --ink-soft:#5A626A;
+  --rule:#E2E4E1;
+  --leaf:#F7F5EF;          /* the page stock inside the book */
+  --leaf-edge:#E6E1D4;
+
+  /* one cloth colour per book */
+  --teal:#14606B;
+  --rust:#9E4B2F;
+  --ochre:#8A6A1E;
+  --plum:#5B3B57;
+  --slate:#47535D;
+
+  --accent:var(--teal);   /* each page overrides this */
+
+  --ui:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --book:"Newsreader",Georgia,"Times New Roman",serif;
+
+  --measure:60ch;
+  --pad:clamp(1.25rem,5vw,2.5rem);
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--ui);
+  font-size:1.35rem;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{max-width:940px;margin:0 auto;padding-inline:var(--pad)}
+
+/* ---------- top bar ---------- */
+.topbar{
+  border-bottom:1px solid var(--rule);
+  position:sticky;top:0;z-index:20;
+  background:var(--paper);
+}
+.topbar-inner{
+  display:flex;flex-wrap:wrap;align-items:baseline;
+  gap:.4rem 1.5rem;padding-block:1rem;
+}
+.brand{
+  font-weight:700;font-size:1rem;letter-spacing:.02em;
+  color:var(--ink);text-decoration:none;margin-right:auto;
+}
+.topbar a.tab{
+  font-size:.95rem;font-weight:500;color:var(--ink-soft);
+  text-decoration:none;padding-block:.15rem;
+  border-bottom:2px solid transparent;
+}
+.topbar a.tab:hover,
+.topbar a.tab:focus-visible{color:var(--accent);border-bottom-color:var(--accent)}
+.topbar a.tab[aria-current="page"]{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* ---------- masthead ---------- */
+.masthead{padding-block:clamp(3rem,8vw,5.5rem) clamp(2rem,5vw,3rem)}
+.masthead h1{
+  font-size:clamp(2.75rem,8vw,4.75rem);
+  font-weight:700;letter-spacing:-.035em;line-height:1;
+  margin:0 0 1.25rem;text-wrap:balance;
+}
+.bio{
+  font-size:1.4rem;line-height:1.55;color:var(--ink-soft);
+  max-width:var(--measure);margin:0;
+}
+.kicker{
+  font-size:.9rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 1rem;
+}
+.duedate{
+  font-size:.9rem;font-weight:500;color:var(--ink-soft);
+  margin:.85rem 0 0;
+}
+.official{
+  font-family:var(--book);font-size:1.25rem;font-style:italic;
+  color:var(--ink-soft);margin:.35rem 0 0;
+}
+
+/* ---------- the book ---------- */
+.bookwrap{max-width:1100px;padding-block:clamp(1rem,3vw,2rem) clamp(3rem,7vw,5rem)}
+
+.book{
+  --p:0;
+  --coverW:min(454px,40vw);
+  --coverH:calc(var(--coverW) * 1.55);
+  position:relative;
+  width:calc(var(--coverW) * (1 + var(--p)));
+  height:var(--coverH);
+  margin-inline:auto;
+  perspective:2400px;perspective-origin:50% 44%;
+  transition:width .8s cubic-bezier(.22,.61,.36,1);
+}
+
+.book-stage{
+  position:absolute;inset:0;
+  transform-style:preserve-3d;
+}
+
+.leafpage{
+  position:absolute;top:0;height:100%;width:var(--coverW);
+  background:var(--leaf);
+  overflow:hidden;
+}
+.leafpage.left{
+  left:0;border-radius:3px 0 0 3px;
+  box-shadow:inset -16px 0 26px -16px rgba(28,22,12,.42);
+}
+.leafpage.right{
+  right:0;border-radius:0 3px 3px 0;
+  box-shadow:inset 16px 0 26px -16px rgba(28,22,12,.42);
+}
+
+.book-shadow{
+  position:absolute;inset:0;border-radius:4px;
+  box-shadow:0 26px 44px -20px rgba(12,16,18,.5);
+  pointer-events:none;
+}
+
+/* page contents */
+.pagebody{
+  height:100%;padding:clamp(1.15rem,2.6vw,2rem);
+  display:flex;flex-direction:column;
+  font-family:var(--book);
+  overflow:auto;
+}
+.pagebody .qnum{
+  font-family:var(--ui);font-size:.8rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 .9rem;
+}
+.pagebody h2{
+  font-family:var(--book);font-weight:700;
+  font-size:clamp(1.25rem,2.3vw,1.55rem);line-height:1.2;
+  letter-spacing:-.005em;margin:0 0 .85rem;color:var(--ink);
+}
+.pagebody p{font-size:1.35rem}
+.pagebody p{
+  font-size:1.35rem;line-height:1.55;margin:0 0 1rem;color:var(--ink);
+}
+.pagebody p:last-child{margin-bottom:0}
+.folio{
+  font-family:var(--ui);font-size:.78rem;color:#8B8577;
+  margin-top:auto;padding-top:.6rem;
+}
+
+/* the cover — cloth with foil stamping, no image needed */
+.cover{
+  position:absolute;top:0;right:0;width:var(--coverW);height:100%;
+  transform-origin:left center;transform-style:preserve-3d;
+  transform:translateZ(3px) rotateY(calc(var(--p) * -175deg));
+  transition:transform .85s cubic-bezier(.5,.02,.3,1), visibility 0s;
+}
+/* once open, get the cover's back face off the left page */
+.book.is-open .cover{
+  visibility:hidden;
+  transition:transform .85s cubic-bezier(.5,.02,.3,1), visibility 0s .8s;
+}
+.cover-face{
+  position:absolute;inset:0;backface-visibility:hidden;
+  overflow:hidden;
+}
+.cover-front{
+  border-radius:0 5px 5px 0;
+  background:#14606B url("cover.jpg") center/cover no-repeat;
+  isolation:isolate;
+  display:flex;flex-direction:column;
+  padding:clamp(1.6rem,4vw,2.6rem);
+  color:#fff;
+}
+/* recolour the cloth without flattening its weave or the debossing */
+.cover-front::before{
+  content:"";position:absolute;inset:0;
+  background:var(--accent);
+  mix-blend-mode:color;
+  pointer-events:none;
+}
+.cover-front > *{position:relative;z-index:1}
+.cover-title{
+  font-family:var(--book);font-weight:500;
+  font-size:clamp(1.35rem,3vw,2rem);line-height:1.15;
+  letter-spacing:.01em;margin:0;
+  text-shadow:0 1px 2px rgba(0,0,0,.32);
+}
+.cover-rule{
+  width:2.2rem;height:1px;background:rgba(255,255,255,.55);
+  margin:.9rem 0 0;border:0;
+}
+.cover-sub{
+  font-family:var(--ui);font-size:.72rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.88);margin:auto 0 0;
+  text-shadow:0 1px 2px rgba(0,0,0,.32);
+}
+/* plain endpaper: no photo, so nothing flashes as the cover swings */
+.cover-back{
+  transform:rotateY(180deg);border-radius:5px 0 0 5px;
+  background:var(--leaf);
+  box-shadow:inset -14px 0 24px -16px rgba(28,22,12,.4);
+}
+
+/* the turning leaf */
+.turner{
+  position:absolute;top:0;right:0;width:var(--coverW);height:100%;
+  transform-origin:left center;transform-style:preserve-3d;
+  transform:translateZ(2px) rotateY(0deg);
+  pointer-events:none;visibility:hidden;
+}
+.turner.is-turning{visibility:visible;transition:transform .62s cubic-bezier(.42,.02,.35,1)}
+.turner.is-flipped{transform:translateZ(2px) rotateY(-180deg)}
+.turner-face{
+  position:absolute;inset:0;backface-visibility:hidden;
+  background:var(--leaf);overflow:hidden;
+}
+.turner-front{border-radius:0 3px 3px 0;box-shadow:inset 16px 0 26px -16px rgba(28,22,12,.42)}
+.turner-back{transform:rotateY(180deg);border-radius:3px 0 0 3px;box-shadow:inset -16px 0 26px -16px rgba(28,22,12,.42)}
+
+/* the gutter where pages meet */
+.gutter{
+  position:absolute;top:0;bottom:0;left:50%;width:8%;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,transparent,rgba(28,22,12,.26),transparent);
+  opacity:clamp(0,calc((var(--p) - .5) * 4),1);
+  pointer-events:none;
+}
+
+/* ---------- controls ---------- */
+.bookrow{position:relative;display:flex;justify-content:center}
+.bookrow .book{flex:0 0 auto}
+.bookrow .pager{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+  background:var(--paper);
+}
+.bookrow .pager-prev{left:0}
+.bookrow .pager-next{right:0}
+.pager{
+  width:3rem;height:3rem;flex:none;
+  border:1px solid var(--rule);border-radius:50%;
+  background:var(--paper);color:var(--ink);
+  font-size:1.1rem;line-height:1;cursor:pointer;
+  display:grid;place-items:center;
+  transition:background .18s,border-color .18s,color .18s;
+}
+.pager:hover:not(:disabled){background:var(--accent);border-color:var(--accent);color:#fff}
+.pager:disabled{opacity:.3;cursor:default}
+.counter{
+  font-size:.9rem;font-weight:500;color:var(--ink-soft);
+  text-align:center;margin:1.1rem 0 0;
+}
+
+.flatlink{
+  display:block;margin:1.5rem auto 0;
+  background:none;border:0;padding:.4rem;
+  font-family:var(--ui);font-size:1rem;font-weight:500;
+  color:var(--accent);text-decoration:underline;
+  text-underline-offset:3px;cursor:pointer;
+}
+
+.flat{
+  border-top:1px solid var(--rule);
+  padding-block:clamp(2rem,5vw,3rem);
+}
+.flat[hidden]{display:none}
+.flat h2{
+  font-size:1.5rem;font-weight:700;letter-spacing:-.015em;
+  margin:2rem 0 .6rem;
+}
+.flat h2:first-of-type{margin-top:0}
+.flat p{max-width:var(--measure);margin:0 0 1rem}
+.flat .flat-label{
+  font-size:.85rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 .35rem;
+}
+
+/* ---------- buttons under project books ---------- */
+.actions{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:1.5rem}
+.btn{
+  font-family:var(--ui);font-size:1rem;font-weight:500;
+  padding:.7rem 1.3rem;border-radius:3px;cursor:pointer;
+  border:1px solid var(--accent);background:var(--accent);color:#fff;
+  text-decoration:none;display:inline-block;
+}
+.btn.ghost{background:var(--paper);color:var(--accent)}
+.btn[aria-disabled="true"]{
+  border-color:var(--rule);background:var(--paper);
+  color:var(--ink-soft);cursor:default;
+}
+
+/* ---------- footer ---------- */
+.sitefoot{
+  border-top:1px solid var(--rule);
+  padding-block:2.25rem 3.5rem;
+  font-size:.92rem;color:var(--ink-soft);
+}
+.sitefoot p{max-width:var(--measure);margin:0}
+
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* ---------- phone: one page at a time, no 3D ---------- */
+@media (max-width:760px){
+  .book{--coverW:100%;width:100%;height:auto;min-height:30rem;perspective:none}
+  .leafpage{position:static;width:100%;height:auto}
+  .leafpage.left,.leafpage.right{box-shadow:none;border-radius:3px}
+  .leafpage.left{border-bottom:1px solid var(--leaf-edge)}
+  .book-stage{position:relative;display:flex;flex-direction:column}
+  .cover{position:absolute;inset:0;width:100%;transform:none;transition:opacity .4s}
+  .cover-front{border-radius:4px}
+  .book.is-open .cover{opacity:0;pointer-events:none}
+  .turner,.gutter,.book-shadow{display:none}
+  .bookrow .pager{position:static;transform:none}
+  .bookrow{flex-wrap:wrap;gap:1rem;justify-content:center}
+  .bookrow .book{flex:1 0 100%;order:-1}
+  .pagebody{overflow:visible}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+/* left page fades in only once the cover has swung clear */
+@media (min-width:761px){
+  .leafpage.left{opacity:clamp(0,calc((var(--p) - .3) * 6),1)}
+}
+
+
+/* ---------- masthead grid ---------- */
+.masthead-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:clamp(1.5rem,4vw,4rem);
+  align-items:start;
+  padding-block:clamp(2.5rem,6vw,4.5rem) clamp(1.75rem,4vw,2.75rem);
+  border-bottom:1px solid var(--rule);
+}
+.metablock{
+  font-size:.9rem;line-height:1.45;color:var(--ink-soft);
+  border-left:2px solid var(--accent);
+  padding-left:1.1rem;min-width:13rem;
+}
+.metablock dt{
+  font-size:.68rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);margin-top:.85rem;
+}
+.metablock dt:first-child{margin-top:0}
+.metablock dd{margin:.12rem 0 0;color:var(--ink)}
+
+/* ---------- contents ---------- */
+.contents{padding-block:clamp(2rem,5vw,3.25rem);border-top:1px solid var(--rule)}
+.contents h2{
+  font-size:.72rem;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 1.1rem;
+}
+.toc{list-style:none;margin:0;padding:0;counter-reset:toc}
+.toc li{border-top:1px solid var(--rule)}
+.toc li:last-child{border-bottom:1px solid var(--rule)}
+.toc button{
+  width:100%;display:flex;align-items:baseline;gap:1rem;
+  background:none;border:0;cursor:pointer;text-align:left;
+  font-family:var(--ui);font-size:1.15rem;color:var(--ink);
+  padding:.95rem .25rem;
+}
+.toc button:hover,.toc button:focus-visible{color:var(--accent)}
+.toc .n{
+  font-size:.78rem;font-weight:600;letter-spacing:.1em;
+  color:var(--accent);flex:none;width:1.6rem;
+}
+.toc .t{flex:1 1 auto;min-width:0}
+.toc .dots{
+  flex:1 1 auto;border-bottom:1px dotted var(--rule);
+  transform:translateY(-.3em);min-width:1.5rem;
+}
+.toc .pg{font-size:.85rem;color:var(--ink-soft);flex:none}
+
+@media (max-width:760px){
+  .masthead-grid{grid-template-columns:1fr}
+  .toc .dots{display:none}
+}
+
+/* ---------- one cloth colour per book ---------- */
+body.c-rust{--accent:var(--rust)}
+body.c-ochre{--accent:var(--ochre)}
+body.c-plum{--accent:var(--plum)}
+body.c-slate{--accent:var(--slate)}
+
+/* pages that have nothing in them yet */
+.pagebody .pending{color:#8B8577;font-style:italic}
+.flat .pending{color:var(--ink-soft);font-style:italic}
+
+/* the flat toggle becomes a real button when it sits in an action row */
+.actions .flatlink{display:inline-block;margin:0;text-decoration:none;padding:.7rem 1.3rem}

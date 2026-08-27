@@ -3,87 +3,138 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Michael Wong — Writing Portfolio</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<title>Michael Wong — ENC 1101 ePortfolio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%98%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-  <div class="wrap nav-inner">
-    <a class="nav-name" href="index.html">Michael Wong</a>
+<nav class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html">Michael Wong</a>
     <a class="tab" href="index.html" aria-current="page">Home</a>
-    <a class="tab" href="project1.html">Major Project 1</a>
-    <a class="tab" href="project2.html">Major Project 2</a>
-    <a class="tab" href="project3.html">Major Project 3</a>
-    <a class="tab" href="extras.html">Extras</a>
+    <a class="tab" href="project1.html">Field Notes</a>
+    <a class="tab" href="project2.html">The Interview</a>
+    <a class="tab" href="project3.html">What Changed</a>
+    <a class="tab" href="extras.html">Process Work</a>
   </div>
 </nav>
 
-<div class="stage" id="hero">
-  <div class="stage-sticky">
-    <div class="wrap wrap-wide hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">ENC 1101 · Composition I · Fall 2026</p>
-        <h1>Writing is what happens in the second draft.</h1>
-        <p class="lede">I'm a first-year Electrical Engineering major at UCF, from Longwood, Florida. I'm here because I want to build things, and because I'd rather work on a hard problem than almost anything else.</p>
-        <div class="meta">
-          <span><b>Michael Wong</b></span>
-          <span>Instructor: <b>Professor Pamela Baker</b></span>
-          <span>University of Central Florida</span>
-        </div>
-      </div>
+<header class="wrap masthead-grid">
+  <div>
+    <h1>Michael Wong</h1>
+    <p class="bio">I'm a first-year Electrical Engineering major at UCF, from Longwood, Florida. I'd rather work on a hard problem than almost anything else. This site holds my writing for ENC 1101.</p>
+  </div>
+  <dl class="metablock">
+    <dt>Course</dt><dd>ENC 1101 Composition I</dd>
+    <dt>Term</dt><dd>Fall 2026</dd>
+    <dt>Instructor</dt><dd>Professor Pamela Baker</dd>
+    <dt>Department</dt><dd>Writing and Rhetoric, UCF</dd>
+  </dl>
+</header>
 
-      <div class="book-frame" aria-hidden="true">
-        <div class="book">
-          <div class="leaf leaf-left"></div>
-          <div class="leaf leaf-right"><img src="page-draft.jpg" alt="" width="590" height="953"></div>
-          <div class="cover">
-            <div class="cover-face cover-front"><img src="cover.jpg" alt="" width="566" height="825"></div>
-            <div class="cover-face cover-back"><img src="page-notes.jpg" alt=""></div>
-          </div>
+<div class="wrap bookwrap">
+
+  <div class="bookrow">
+    <button class="pager pager-prev" type="button" aria-label="Previous page">&larr;</button>
+  <div class="book" id="book">
+    <div class="book-stage">
+      <div class="leafpage left"><div class="pagebody page-l"></div></div>
+      <div class="leafpage right"><div class="pagebody page-r"></div></div>
+      <div class="gutter"></div>
+      <div class="turner">
+        <div class="turner-face turner-front pagebody"></div>
+        <div class="turner-face turner-back pagebody"></div>
+      </div>
+      <div class="cover">
+        <div class="cover-face cover-front">
+          <p class="cover-title">Where I'm<br>starting from</p>
+          <hr class="cover-rule">
+          <p class="cover-sub">Michael Wong<br>ENC 1101 · Fall 2026</p>
         </div>
+        <div class="cover-face cover-back"></div>
       </div>
     </div>
-    <p class="scroll-cue">Scroll to open<span>&darr;</span></p>
+    <div class="book-shadow"></div>
+  </div>
+    <button class="pager pager-next" type="button" aria-label="Next page">&rarr;</button>
+  </div>
+
+  <p class="counter" aria-live="polite">Cover</p>
+
+  <button class="flatlink" type="button" aria-expanded="false"
+          data-open="Read all four answers on one page"
+          data-close="Hide the one-page version">Read all four answers on one page</button>
+</div>
+
+<section class="wrap contents">
+  <h2>Contents</h2>
+  <ol class="toc">
+    <li><button type="button" data-spread="0"><span class="n">I</span><span class="t">What I want to accomplish by going to college</span><span class="dots"></span><span class="pg">p. 1</span></button></li>
+    <li><button type="button" data-spread="0"><span class="n">II</span><span class="t">How writing helps me get there</span><span class="dots"></span><span class="pg">p. 2</span></button></li>
+    <li><button type="button" data-spread="1"><span class="n">III</span><span class="t">What I want out of this course, beyond a grade</span><span class="dots"></span><span class="pg">p. 3</span></button></li>
+    <li><button type="button" data-spread="1"><span class="n">IV</span><span class="t">What I think this course will be like</span><span class="dots"></span><span class="pg">p. 4</span></button></li>
+  </ol>
+</section>
+
+<!-- source content for the book -->
+<div class="spreads" hidden>
+  <div class="spread">
+    <div class="side-l">
+      <p class="qnum">Goal One</p>
+      <h2>What I want to accomplish by going to college</h2>
+      <p>I want my Electrical Engineering degree so I can invent things that help people. I've taught myself the software side already, mostly by building things and breaking them. What I can't teach myself is the math and theory underneath circuits and signals, and that's what I need if I want to design hardware instead of wiring parts together and hoping. The degree also gives me a reason for someone to trust me with real work, which I don't have yet. Right now I have projects and no credential. I want both.</p>
+      <p class="folio">1</p>
+    </div>
+    <div class="side-r">
+      <p class="qnum">Goal Two</p>
+      <h2>How writing helps me get there</h2>
+      <p>Almost everything at work now happens in writing. Employers, coworkers, clients, it's all email and text. Nobody walks over to your desk anymore. So if I can't say what I mean in writing, it doesn't matter how good the idea is, because the written version is the only one anyone will ever see. Engineering is full of this. Lab reports, specs, bug reports, the message you send when something breaks at midnight. All of it is writing, even when nobody calls it that.</p>
+      <p class="folio">2</p>
+    </div>
+  </div>
+  <div class="spread">
+    <div class="side-l">
+      <p class="qnum">Goal Three</p>
+      <h2>What I want out of this course, beyond a grade</h2>
+      <p>I want to get an idea out of my head and have it land in somebody else's head sounding the way I meant it. There's a gap between what I mean and what people hear, and I want to close as much of it as I can. I notice that gap most when I'm sure I was clear and the other person heard something else entirely. I don't expect it to disappear. I want to get better at predicting it, so I can write for the person reading instead of writing for myself and hoping.</p>
+      <p class="folio">3</p>
+    </div>
+    <div class="side-r">
+      <p class="qnum">Goal Four</p>
+      <h2>What I think this course will be like</h2>
+      <p>I think the new part will be studying how communication works instead of just doing it. Why the same sentence lands differently on two different people, and how much of that I can actually control. I've never taken a class that treated writing as something to examine rather than something to turn in. The review part is what I've been doing since middle school. Thesis statements, MLA citations, drafts and revisions. Ms. Baker seems very passionate about teaching. She isn't here just to give us a grade, she's here to teach students life lessons.</p>
+      <p class="folio">4</p>
+    </div>
   </div>
 </div>
 
-<main>
-  <section class="wrap">
-    <p class="sec-label">Goal One</p>
-    <h2>What I want to accomplish by going to college</h2>
-    <p>I want my Electrical Engineering degree so I can invent things that help people. I like hard problems. I want to spend my life building things that didn't exist before, and that somebody is better off for having.</p>
-  </section>
+<!-- plain version, for grading without clicking -->
+<section class="wrap flat" hidden>
+  <p class="flat-label">Goal One</p>
+  <h2>What I want to accomplish by going to college</h2>
+  <p>I want my Electrical Engineering degree so I can invent things that help people. I've taught myself the software side already, mostly by building things and breaking them. What I can't teach myself is the math and theory underneath circuits and signals, and that's what I need if I want to design hardware instead of wiring parts together and hoping. The degree also gives me a reason for someone to trust me with real work, which I don't have yet. Right now I have projects and no credential. I want both.</p>
 
-  <section class="wrap">
-    <p class="sec-label">Goal Two</p>
-    <h2>How writing helps me get there</h2>
-    <p>Almost everything at work now happens in writing. Employers, coworkers, clients, it's all email and text. Nobody walks over to your desk anymore. So if I can't say what I mean in writing, it doesn't matter how good the idea is, because <span class="mark">the written version is the only one anyone will ever see.</span> For an engineer, writing is how the work gets delivered.</p>
-  </section>
+  <p class="flat-label">Goal Two</p>
+  <h2>How writing helps me get there</h2>
+  <p>Almost everything at work now happens in writing. Employers, coworkers, clients, it's all email and text. Nobody walks over to your desk anymore. So if I can't say what I mean in writing, it doesn't matter how good the idea is, because the written version is the only one anyone will ever see. Engineering is full of this. Lab reports, specs, bug reports, the message you send when something breaks at midnight. All of it is writing, even when nobody calls it that.</p>
 
-  <section class="wrap">
-    <p class="sec-label">Goal Three</p>
-    <h2>What I want out of this course, beyond a grade</h2>
-    <p>I want to get an idea out of my head and have it land in somebody else's head sounding the way I meant it. There's a gap between what I mean and what people hear, and I want to close as much of it as I can.</p>
-  </section>
+  <p class="flat-label">Goal Three</p>
+  <h2>What I want out of this course, beyond a grade</h2>
+  <p>I want to get an idea out of my head and have it land in somebody else's head sounding the way I meant it. There's a gap between what I mean and what people hear, and I want to close as much of it as I can. I notice that gap most when I'm sure I was clear and the other person heard something else entirely. I don't expect it to disappear. I want to get better at predicting it, so I can write for the person reading instead of writing for myself and hoping.</p>
 
-  <section class="wrap">
-    <p class="sec-label">Goal Four</p>
-    <h2>What I think this course will be like</h2>
-    <p>I think the new part will be studying how communication works, instead of just doing it. Why the same sentence lands differently on two different people, and <span class="mark">how much of that I can actually control.</span></p>
-    <p>The review part is what I've been doing since middle school. Thesis statements, MLA citations, drafts and revisions.</p>
-  </section>
-</main>
+  <p class="flat-label">Goal Four</p>
+  <h2>What I think this course will be like</h2>
+  <p>I think the new part will be studying how communication works instead of just doing it. Why the same sentence lands differently on two different people, and how much of that I can actually control. I've never taken a class that treated writing as something to examine rather than something to turn in. The review part is what I've been doing since middle school. Thesis statements, MLA citations, drafts and revisions. Ms. Baker seems very passionate about teaching. She isn't here just to give us a grade, she's here to teach students life lessons.</p>
+</section>
 
-<footer class="wrap">
-  <p>Michael Wong · ENC 1101 Composition I · Fall 2026 · Department of Writing and Rhetoric, University of Central Florida</p>
+<footer class="wrap sitefoot">
+  <p>Michael Wong · ENC 1101 Composition I · Fall 2026 · Instructor: Professor Pamela Baker · Department of Writing and Rhetoric, University of Central Florida</p>
 </footer>
 
 <script src="book.js"></script>
-
 </body>
 </html>
