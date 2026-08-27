@@ -242,21 +242,28 @@ body{
 .bookrow{position:relative;display:flex;justify-content:center}
 .bookrow .book{flex:0 0 auto}
 .bookrow .pager{
-  position:absolute;top:50%;transform:translateY(-50%);z-index:3;
-  background:var(--paper);
+  position:absolute;top:50%;margin-top:-1.75rem;z-index:3;
 }
 .bookrow .pager-prev{left:0}
 .bookrow .pager-next{right:0}
 .pager{
-  width:3rem;height:3rem;flex:none;
-  border:1px solid var(--rule);border-radius:50%;
-  background:var(--paper);color:var(--ink);
-  font-size:1.1rem;line-height:1;cursor:pointer;
+  width:3.5rem;height:3.5rem;flex:none;
+  border:0;border-radius:50%;
+  background:var(--accent);color:#fff;
+  font-size:1.45rem;line-height:1;cursor:pointer;
   display:grid;place-items:center;
-  transition:background .18s,border-color .18s,color .18s;
+  box-shadow:0 4px 12px rgba(12,16,18,.26);
+  transition:transform .18s,box-shadow .18s,opacity .18s;
 }
-.pager:hover:not(:disabled){background:var(--accent);border-color:var(--accent);color:#fff}
-.pager:disabled{opacity:.3;cursor:default}
+.pager:hover:not(:disabled){
+  transform:scale(1.1);
+  box-shadow:0 6px 18px rgba(12,16,18,.34);
+}
+.pager:active:not(:disabled){transform:scale(.96)}
+.pager:disabled{
+  background:var(--rule);color:#fff;
+  box-shadow:none;opacity:.55;cursor:default;
+}
 .counter{
   font-size:.9rem;font-weight:500;color:var(--ink-soft);
   text-align:center;margin:1.1rem 0 0;
