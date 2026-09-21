@@ -410,3 +410,23 @@ body.c-slate{--accent:var(--slate)}
 
 /* the flat toggle becomes a real button when it sits in an action row */
 .actions .flatlink{display:inline-block;margin:0;text-decoration:none;padding:.7rem 1.3rem}
+
+/* ---------- nav dropdown ---------- */
+.tabwrap{position:relative;display:inline-block}
+.tabwrap>.dropdown{
+  position:absolute;top:100%;left:-.55rem;z-index:60;
+  min-width:15.5rem;padding:.4rem;margin-top:.5rem;
+  background:var(--paper);border:1px solid var(--rule);border-radius:10px;
+  box-shadow:0 14px 34px rgba(0,0,0,.13);
+  opacity:0;visibility:hidden;transform:translateY(-5px);
+  transition:opacity .16s ease,transform .16s ease,visibility .16s;
+}
+.tabwrap::after{content:"";position:absolute;top:100%;left:0;width:100%;height:.6rem}
+.tabwrap:hover>.dropdown,.tabwrap:focus-within>.dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.tabwrap>.dropdown a{
+  display:block;padding:.5rem .65rem;border-radius:6px;text-decoration:none;
+  font-family:var(--ui);font-size:.92rem;font-weight:500;color:var(--ink);
+}
+.tabwrap>.dropdown a span{display:block;font-weight:400;font-size:.78rem;color:var(--ink-soft);margin-top:.1rem}
+.tabwrap>.dropdown a:hover,.tabwrap>.dropdown a:focus-visible{background:var(--leaf);color:var(--accent)}
+@media (max-width:760px){.tabwrap>.dropdown{display:none}}
