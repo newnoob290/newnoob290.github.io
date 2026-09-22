@@ -49,6 +49,29 @@
     font-family:var(--ui); font-size:.95rem; font-weight:600; color:var(--accent);
   }
   .shelfbook:hover .shelfcta{text-decoration:underline; text-underline-offset:3px}
+
+  .coursework{border-top:1px solid var(--rule); padding-top:clamp(2rem,5vw,3rem); margin-top:clamp(1rem,4vw,2rem)}
+  .coursework h2{margin:0 0 .35rem}
+  .coursework .lede{font-family:var(--book); color:var(--ink-soft); margin:0 0 clamp(1.75rem,4vw,2.5rem)}
+  .textbox{
+    border:1px solid var(--border-strong,#C9CCC7); border-left:4px solid var(--accent);
+    border-radius:8px; background:var(--leaf);
+    padding:clamp(1.1rem,3vw,1.6rem) clamp(1.2rem,3.5vw,1.9rem);
+    margin:0 0 clamp(1.5rem,4vw,2.25rem);
+  }
+  .textbox h3{
+    font-family:var(--ui); font-size:.72rem; font-weight:600; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 .85rem;
+  }
+  .goalbox p{font-family:var(--book); font-size:16pt; line-height:1.55; margin:0 0 1rem}
+  .goalbox p:last-child{margin-bottom:0}
+  .framing{font-family:var(--book); font-size:16pt; line-height:1.5; margin:0}
+  .draft{margin:0 0 clamp(2.5rem,6vw,3.75rem); max-width:var(--measure)}
+  .draft h3{font-family:var(--ui); font-size:1.05rem; font-weight:500; margin:0 0 .9rem}
+  .draft p{font-family:var(--book); font-size:1.12rem; line-height:1.65; margin:0 0 1.1rem}
+  .draft .lbl{font-family:var(--ui); font-size:.72rem; font-weight:600; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--accent); margin:1.6rem 0 .45rem}
+  .draft .cited{font-size:1rem; color:var(--ink-soft); padding-left:2.2rem; text-indent:-2.2rem}
 </style>
 </head>
 <body class="c-rust">
@@ -79,6 +102,56 @@
 <div class="wrap">
   <div class="shelf" data-books-shelf></div>
 </div>
+
+
+<section class="wrap coursework">
+  <h2>Goals and Drafting</h2>
+  <p class="lede">Written alongside the three books above, as Major Project 1 came together.</p>
+
+  <div class="textbox goalbox">
+    <h3>My non-grade goals for Major Project 1</h3>
+    <p><b>1. As a writer.</b> I want to build a bigger vocabulary and get the grammar rules right. My plan is to write pieces on my own, let other people read them, and learn from the feedback they give me. I also expect to learn just by doing this project and the ones that come after it.</p>
+    <p><b>2. At UCF.</b> My goal is to make connections and meet people from all kinds of backgrounds, since UCF has a huge diversity of people. I plan to join clubs, both to meet people and to gain experience in my major. I also want to get into intramural sports, which will keep me active and social for my whole time here.</p>
+    <p><b>3. About rhetoric.</b> I want to be able to see how rhetors shape my actions and my thinking in places I am not familiar with, like online or out in public. I think knowing the rhetors around me will help me understand what a place actually means, and that skill should carry over into everyday life.</p>
+  </div>
+
+  <div class="textbox">
+    <h3>Framing statement</h3>
+    <p class="framing">Initial drafting of MP1.</p>
+  </div>
+
+  <article class="draft">
+    <h3>Claim: The Recreation and Wellness Center matters to UCF because it is the one building on campus where effort does not have to count toward anything.</h3>
+    <p>Everywhere else at this school, what I do is being measured. Classes turn into grades, labs turn into reports, and the varsity teams are picking from people who got recruited out of high school. The RWC is the only place I go where none of that applies. I lift, somebody swims laps, somebody else loses a racquetball game, and none of it lands on a record anywhere.</p>
+    <p>The building is set up for that. The front half is an ordinary gym, with cardio machines by the doors and the free weights and racks at the back, and past it there are swimming pools, basketball courts, racquetball courts and tennis courts. Any enrolled student can use all of it. The intramural leagues run on the same principle. A team signs up, gets a schedule built around classes, and plays a full season, and nobody checks whether anyone on that team has played before. For a student who finished high school as an athlete and never got recruited, that league is the difference between still playing and being finished.</p>
+    <p>UCF keeps its name small in here. The logos that exist are on the directional signs pointing you toward the courts and the pools, and on the wall under the main television at the entrance. Out on the floor itself there is nothing. A building the university wanted to show off would look different from that. This one is built to be used and worn down, which is exactly why it is open to everyone.</p>
+  </article>
+
+  <div class="textbox">
+    <h3>Framing statement</h3>
+    <p class="framing">More drafting of MP1: Citing sources.</p>
+  </div>
+
+  <article class="draft">
+    <p class="lbl">Quote</p>
+    <p>Downs traces ethos back to its Greek root. He explains that ethos means &ldquo;one&rsquo;s accustomed place or habit of being&rdquo; and carries &ldquo;the idea that you know someone by where they dwell, by their &lsquo;haunts&rsquo;&rdquo; (475).</p>
+
+    <p class="lbl">What the quote means</p>
+    <p>Downs is saying that a person&rsquo;s character comes out of where they spend their time and what they do there over and over. It is built by habit rather than announced.</p>
+
+    <p class="lbl">My evidence</p>
+    <p>Nothing on the RWC floor keeps a record. No score is taken, no attendance is checked, and no result goes anywhere. The regulars are still known. The signage is short and practical, telling you to wipe your machine down and re-rack your weights, and the staff almost never speak. Every person who re-racks a plate, or leaves one sitting on the bar, is telling the next person what the rules of that floor actually are. I train early in the morning, and the people in that hour are mostly the same faces week after week. Almost none of us have been introduced.</p>
+
+    <p class="lbl">Why it matters</p>
+    <p>That is the part of the building worth defending. A student who keeps showing up for a semester becomes someone specific in that room, and none of it lands on a transcript or a roster. The place lets a person build a reputation out of habit, in a university that otherwise runs on records.</p>
+
+    <p class="lbl">Building off Downs</p>
+    <p>Downs describes ethos as something a speaker carries into an argument so an audience will believe them. At the RWC nobody is arguing and there is no audience. The ethos forms anyway, out of nothing except who keeps turning up and how they behave once they are there.</p>
+
+    <p class="lbl">Work Cited</p>
+    <p class="cited">Downs, Doug. &ldquo;Rhetoric: Making Sense of Human Interaction and Meaning-Making.&rdquo; <i>Writing about Writing</i>, edited by Elizabeth Wardle and Doug Downs, 5th ed., Bedford/St. Martin&rsquo;s, 2022, pp. 458&ndash;481.</p>
+  </article>
+</section>
 
 <footer class="wrap sitefoot">
   <p>Michael Wong · ENC 1101 Composition I · Fall 2026 · Instructor: Professor Pamela Baker · Department of Writing and Rhetoric, University of Central Florida</p>
