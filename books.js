@@ -29,6 +29,20 @@ window.ENC_BOOKS = [
     blurb:  "Kairos and identification",
     desc:   "Two question sets answered inside the RWC: kairos, and identification with the people on the floor.",
     accent: "plum"
+  },
+  {
+    href:   "goals.html",
+    title:  "My Goals",
+    blurb:  "Non-grade goals for MP1",
+    desc:   "What I personally hope to get out of this project, written before the drafting started.",
+    accent: "teal"
+  },
+  {
+    href:   "drafting.html",
+    title:  "Drafting",
+    blurb:  "Initial drafting, and citing sources",
+    desc:   "The first claim and its evidence, then the same claim worked through with a quote from Downs.",
+    accent: "slate"
   }
 ];
 
