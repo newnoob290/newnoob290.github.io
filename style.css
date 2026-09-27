@@ -18,6 +18,7 @@
   --ochre:#8A6A1E;
   --plum:#5B3B57;
   --slate:#47535D;
+  --moss:#4A6340;
 
   --accent:var(--teal);   /* each page overrides this */
 
@@ -403,6 +404,7 @@ body.c-rust{--accent:var(--rust)}
 body.c-ochre{--accent:var(--ochre)}
 body.c-plum{--accent:var(--plum)}
 body.c-slate{--accent:var(--slate)}
+body.c-moss{--accent:var(--moss)}
 
 /* pages that have nothing in them yet */
 .pagebody .pending{color:#8B8577;font-style:italic}

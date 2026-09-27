@@ -5,7 +5,7 @@
      1. the Major Project 1 hover menu, on every page of the site
      2. the shelf on project1.html
 
-   accent: rust | ochre | plum | teal | slate   (pick an unused one)
+   accent: rust | ochre | plum | teal | slate | moss   (pick an unused one)
 ------------------------------------------------------------------- */
 
 window.ENC_BOOKS = [
@@ -43,6 +43,13 @@ window.ENC_BOOKS = [
     blurb:  "Initial drafting, and citing sources",
     desc:   "The first claim and its evidence, then the same claim worked through with a quote from Downs.",
     accent: "slate"
+  },
+  {
+    href:   "peer-review.html",
+    title:  "First Peer Review Draft MP1",
+    blurb:  "Kairos at the RWC",
+    desc:   "The draft I brought to the first peer review: my kairos claim and three paragraphs of evidence with Downs.",
+    accent: "moss"
   }
 ];
 
