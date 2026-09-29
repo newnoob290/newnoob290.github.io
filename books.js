@@ -50,6 +50,13 @@ window.ENC_BOOKS = [
     blurb:  "Kairos at the RWC",
     desc:   "The draft I brought to the first peer review: my kairos claim and three paragraphs of evidence with Downs.",
     accent: "moss"
+  },
+  {
+    href:   "peer-review-notes.html",
+    title:  "Peer Review Notes",
+    blurb:  "Feedback from class",
+    desc:   "My handwritten notes from peer review: what my classmates suggested, and what I plan to do about it.",
+    accent: "teal"
   }
 ];
 
