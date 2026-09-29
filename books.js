@@ -57,6 +57,13 @@ window.ENC_BOOKS = [
     blurb:  "Feedback from class",
     desc:   "My handwritten notes from peer review: what my classmates suggested, and what I plan to do about it.",
     accent: "teal"
+  },
+  {
+    href:   "second-claim.html",
+    title:  "Drafting Second Claim for MP1",
+    blurb:  "Kairos, and why it matters",
+    desc:   "Drafting second claim for MP1: my kairos claim with evidence and Downs, and the \u201cSo What?\u201d section.",
+    accent: "slate"
   }
 ];
 
