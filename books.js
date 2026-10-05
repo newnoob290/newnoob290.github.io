@@ -64,6 +64,13 @@ window.ENC_BOOKS = [
     blurb:  "Kairos, and why it matters",
     desc:   "Drafting second claim for MP1: my kairos claim with evidence and Downs, and the \u201cSo What?\u201d section.",
     accent: "slate"
+  },
+  {
+    href:   "tech-statement.html",
+    title:  "Technology Statement",
+    blurb:  "Tools I used for MP1",
+    desc:   "Every tool I used for Major Project 1, why I chose it, and how it shaped my thinking, with my GenAI chat log.",
+    accent: "plum"
   }
 ];
 
