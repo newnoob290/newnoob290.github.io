@@ -10,6 +10,13 @@
 
 window.ENC_BOOKS = [
   {
+    href:   "final.html",
+    title:  "Major Project 1: Final Draft",
+    blurb:  "Same Gym, Different Logo",
+    desc:   "My finished Major Project 1 essay, \u201cSame Gym, Different Logo\u201d: the logo, the crowd, and timing at the RWC.",
+    accent: "moss"
+  },
+  {
     href:   "kitchen.html",
     title:  "The Kitchen",
     blurb:  "Rhetoric in my family’s kitchen",
