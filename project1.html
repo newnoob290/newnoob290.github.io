@@ -12,12 +12,18 @@
 <script src="gate.js"></script>
 <style>
   .shelf{
-    display:grid; gap:clamp(1.5rem,4vw,2.5rem);
-    grid-template-columns:1fr;
+    display:flex; flex-direction:column; gap:clamp(2rem,5vw,3rem);
     margin:clamp(2rem,6vw,3.5rem) 0;
   }
-  @media (min-width:560px){ .shelf{grid-template-columns:repeat(2,minmax(0,1fr))} }
-  @media (min-width:820px){ .shelf{grid-template-columns:repeat(3,minmax(0,1fr))} }
+  .shelfrow{display:grid; gap:1.5rem; grid-template-columns:1fr; align-items:start}
+  @media (min-width:720px){ .shelfrow{grid-template-columns:minmax(0,240px) minmax(0,1fr); gap:2.25rem} }
+  .shelfrow .shelfbook{max-width:300px}
+  .reflectbox{margin:0}
+  .reflectbox .tags{font-family:var(--ui); font-size:14pt; line-height:1.4; margin:0 0 .7rem; color:var(--accent)}
+  .reflectbox p{font-family:var(--book); font-size:15pt; line-height:1.55; margin:0}
+  .reflectbox p + p{margin-top:.7rem}
+  .outcomes{margin:.9rem 0 0; padding-left:1.3rem}
+  .outcomes li{font-family:var(--book); font-size:15pt; line-height:1.5; margin:0 0 .7rem}
   .shelfbook{
     display:flex; flex-direction:column; gap:1.1rem;
     text-decoration:none; color:inherit;
@@ -99,6 +105,31 @@
     <dt>Instructor</dt><dd>Professor Pamela Baker</dd>
   </dl>
 </header>
+
+<div class="wrap">
+  <section class="textbox" style="max-width:none;margin-top:clamp(1.5rem,4vw,2.5rem)">
+    <h3>How to read this tab</h3>
+    <p class="framing">On this tab, I will walk you through each artifact and document from Major Project 1. Next to each one, a text box says what it is and how it illustrates one or more of these learning outcomes:</p>
+    <ul class="outcomes">
+      <li><strong>Multiple Literacies &amp; Goal Setting.</strong> Students will be able to demonstrate how they marshal/leverage their multiple literacies (e.g. speaking, listening, reading, multilingual writing, translating, multimodality, etc.) to support their writing processes.</li>
+      <li><strong>Decision Making &amp; Production.</strong> Students will be able to produce writing that demonstrates their ability to navigate choices and constraints when writing for specific audiences, genres, and purposes.</li>
+      <li><strong>Variation across Contexts.</strong> Students will be able to identify, analyze, and reflect on variation in rhetorical and linguistic patterns, including their own, from a range of contexts (e.g cultural, digital, workplace, and/or academic).</li>
+    </ul>
+  </section>
+</div>
+
+<div class="wrap">
+  <section style="border:1px solid #C9CCC7;border-left:4px solid var(--accent);border-radius:8px;background:var(--leaf);padding:1.2rem 1.5rem;margin:clamp(1.5rem,4vw,2.25rem) 0 0;border-width:2px;border-left-width:6px">
+    <h2 style="font-family:var(--ui);font-size:1.6rem;font-weight:700;margin:0 0 .6rem">&#9733; Full graded draft of MP1 with reflective comments</h2>
+    <p style="font-family:var(--book);font-size:1.15rem;line-height:1.5;margin:0 0 1rem">My revised Major Project 1 draft, &ldquo;Same Gym, Different Logo,&rdquo; with my non-grade goals, my questions, and my reflective comments. The comments are in the Google Doc.</p>
+    <p style="font-family:var(--ui);font-size:14pt;color:var(--accent);margin:0 0 .6rem"><strong>Variation across Contexts</strong> &middot; <strong>Multiple Literacies &amp; Goal Setting</strong></p>
+    <p style="font-family:var(--book);font-size:15pt;line-height:1.55;margin:0 0 1rem">Looking at rhetoric in my homework, in class, and in my Data Collection Log showed me that the same principle works differently in each place. At home, kairos was about my mom&rsquo;s mood. At the RWC, it was about the crowd. My comments in this draft also track how I met each of my goals. What still confuses me about rhetoric is how much of kairos is really luck. I pick my own schedule, so maybe the timing is partly my choice.</p>
+    <div class="actions">
+      <a class="btn" style="font-size:1.1rem;padding:.85rem 1.3rem" href="https://docs.google.com/document/d/1u2y9YvxRmU-bmETA-_uA0fbf8Q7nnBEiwyMzqH2hSYU/edit?usp=sharing" target="_blank" rel="noopener">Open the Google Doc (with comments)</a>
+      <a class="btn" href="Wong_MP1_Revised_with_Comments.pdf" target="_blank" rel="noopener">View the PDF (no comments)</a>
+    </div>
+  </section>
+</div>
 
 <div class="wrap">
   <div class="shelf" data-books-shelf>
@@ -207,21 +238,12 @@
 
 
 
-<div class="wrap">
-  <section style="border:1px solid #C9CCC7;border-left:4px solid var(--accent);border-radius:8px;background:var(--leaf);padding:1.2rem 1.5rem;margin:0 0 2.5rem;max-width:var(--measure)">
-    <h2 style="font-family:var(--ui);font-size:1.15rem;font-weight:700;margin:0 0 .6rem">Full graded draft of MP1 with reflective comments</h2>
-    <p style="font-family:var(--book);font-size:1.15rem;line-height:1.5;margin:0 0 1rem">My revised Major Project 1 draft, &ldquo;Same Gym, Different Logo,&rdquo; with my non-grade goals, my questions, and my reflective comments. The comments are in the Google Doc.</p>
-    <div class="actions">
-      <a class="btn" href="https://docs.google.com/document/d/1u2y9YvxRmU-bmETA-_uA0fbf8Q7nnBEiwyMzqH2hSYU/edit?usp=sharing" target="_blank" rel="noopener">Open the Google Doc (with comments)</a>
-      <a class="btn" href="Wong_MP1_Revised_with_Comments.pdf" target="_blank" rel="noopener">View the PDF (no comments)</a>
-    </div>
-  </section>
-</div>
+
 
 <footer class="wrap sitefoot">
   <p>Michael Wong · ENC 1101 Composition I · Fall 2026 · Instructor: Professor Pamela Baker · Department of Writing and Rhetoric, University of Central Florida</p>
 </footer>
 
-<script src="books.js?v=10"></script>
+<script src="books.js?v=12"></script>
 </body>
 </html>
