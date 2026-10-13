@@ -432,3 +432,16 @@ body.c-moss{--accent:var(--moss)}
 .tabwrap>.dropdown a span{display:block;font-weight:400;font-size:.78rem;color:var(--ink-soft);margin-top:.1rem}
 .tabwrap>.dropdown a:hover,.tabwrap>.dropdown a:focus-visible{background:var(--leaf);color:var(--accent)}
 @media (max-width:760px){.tabwrap>.dropdown{display:none}}
+
+.sketch{display:flex;flex-direction:column;gap:clamp(1.25rem,4vw,2rem);margin-top:clamp(2rem,6vw,3.5rem);margin-bottom:clamp(2rem,6vw,3.5rem)}
+.sketchbox{border:1px solid #C9CCC7;border-left:4px solid var(--accent);border-radius:8px;background:var(--leaf);padding:clamp(1.1rem,3vw,1.6rem) clamp(1.2rem,3.5vw,1.9rem);max-width:var(--measure)}
+.sketchbox h2{font-family:var(--ui);font-size:1.5rem;margin:0 0 .7rem}
+.sketchbox h3{font-family:var(--ui);font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:1.4rem 0 .7rem}
+.sketchbox h3:first-child{margin-top:0}
+.sketchbox p,.sketchbox li{font-family:var(--book);font-size:15pt;line-height:1.55}
+.sketchbox p{margin:0}
+.sketchbox ul{margin:0;padding-left:1.2rem}
+.sketchbox li{margin:0 0 .6rem}
+.sketchfig{margin:0;max-width:560px}
+.sketchfig img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 8px 22px rgba(0,0,0,.16)}
+.sketchfig figcaption{font-family:var(--ui);font-size:.95rem;color:var(--ink-soft);margin-top:.6rem}
