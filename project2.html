@@ -10,6 +10,28 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400&display=swap">
 <link rel="stylesheet" href="style.css">
 <script src="gate.js"></script>
+<style>
+  .textbox{
+    border:1px solid var(--border-strong,#C9CCC7); border-left:4px solid var(--accent);
+    border-radius:8px; background:var(--leaf);
+    padding:clamp(1.1rem,3vw,1.6rem) clamp(1.2rem,3.5vw,1.9rem);
+    margin:0 0 clamp(1.5rem,4vw,2.25rem);
+  }
+  .textbox h3{
+    font-family:var(--ui); font-size:.72rem; font-weight:600; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 .85rem;
+  }
+  .sketchsec{display:grid; gap:1.75rem; grid-template-columns:1fr; margin-top:clamp(1.5rem,4vw,2.25rem)}
+  @media (min-width:900px){ .sketchsec{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:start} }
+  .narr{margin:0}
+  .narr .tags{font-family:var(--ui); font-size:14pt; line-height:1.4; margin:0 0 .7rem; color:var(--accent)}
+  .narr p{font-family:var(--book); font-size:16pt; line-height:1.55; margin:0 0 1rem}
+  .narr p:last-child{margin-bottom:0}
+  .sketchpics{display:flex; flex-direction:column; gap:1.5rem}
+  .sketchpics figure{margin:0}
+  .sketchpics img{display:block; width:100%; height:auto; border-radius:6px; box-shadow:0 8px 22px rgba(0,0,0,.16)}
+  .sketchpics figcaption{font-family:var(--ui); font-size:.95rem; color:var(--ink-soft); margin-top:.5rem}
+</style>
 </head>
 <body class="c-ochre">
 
@@ -36,6 +58,26 @@
     <dt>Instructor</dt><dd>Professor Pamela Baker</dd>
   </dl>
 </header>
+
+<div class="wrap">
+  <section class="sketchsec">
+    <div class="textbox narr">
+      <h3>Free Writing for MP2</h3>
+      <p class="tags"><strong>Variation across Contexts</strong></p>
+      <p>Free writing for MP2. This is my free writing about the poster for Christopher Nolan&rsquo;s <em>Tenet</em> (2020). It connects to the learning outcome Variation across Contexts. The poster uses very few words, and it uses layout, images, and double meanings like &ldquo;Time runs out&rdquo; to persuade its audience. These patterns are very different from academic writing, but they work in an advertising context. My notes also show how my own interest in film shapes what I think good writing is.</p>
+    </div>
+    <div class="sketchpics">
+      <figure>
+        <img src="mp2-tenet-poster.jpg" width="944" height="1400" loading="lazy" alt="The theatrical poster for Tenet. Two men rappel up the side of a tall building, and the whole image is tilted. Text: A film by Christopher Nolan. TENET. Time runs out. Written and directed by Christopher Nolan. Only in theaters.">
+        <figcaption>The <em>Tenet</em> poster (Warner Bros., 2020), my example of good writing.</figcaption>
+      </figure>
+      <figure>
+        <img src="mp2-free-writing-notes.jpg" width="1050" height="1400" loading="lazy" alt="My handwritten free writing about the Tenet poster, answering four questions: purpose, audience, and stakes; what makes it good; identity; and how it compares to what I was taught about good writing.">
+        <figcaption>My handwritten free writing about the poster.</figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
 
 <div class="wrap bookwrap">
   <div class="bookrow">
