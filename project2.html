@@ -31,6 +31,14 @@
   .sketchpics figure{margin:0}
   .sketchpics img{display:block; width:100%; height:auto; border-radius:6px; box-shadow:0 8px 22px rgba(0,0,0,.16)}
   .sketchpics figcaption{font-family:var(--ui); font-size:.95rem; color:var(--ink-soft); margin-top:.5rem}
+  .notesfig{grid-column:1/-1; margin:0}
+  .notesfig img{display:block; width:100%; height:auto; border-radius:6px; box-shadow:0 8px 22px rgba(0,0,0,.16)}
+  .notesfig figcaption{font-family:var(--ui); font-size:.95rem; color:var(--ink-soft); margin-top:.5rem}
+  .zoomable{cursor:zoom-in}
+  .lightbox{position:fixed; inset:0; z-index:1000; background:rgba(0,0,0,.88); display:none; overflow:auto; cursor:zoom-out}
+  .lightbox.open{display:block}
+  .lightbox img{display:block; margin:0 auto; max-width:none; width:min(100%,1400px); height:auto; padding:16px; box-sizing:border-box}
+  .lightbox button{position:fixed; top:12px; right:12px; font-family:var(--ui); font-size:1rem; font-weight:600; padding:.55rem .9rem; border:0; border-radius:6px; background:#fff; color:#111; cursor:pointer}
 </style>
 </head>
 <body class="c-ochre">
@@ -71,11 +79,11 @@
         <img src="mp2-tenet-poster.jpg" width="944" height="1400" loading="lazy" alt="The theatrical poster for Tenet. Two men rappel up the side of a tall building, and the whole image is tilted. Text: A film by Christopher Nolan. TENET. Time runs out. Written and directed by Christopher Nolan. Only in theaters.">
         <figcaption>The <em>Tenet</em> poster (Warner Bros., 2020), my example of good writing.</figcaption>
       </figure>
-      <figure>
-        <img src="mp2-free-writing-notes.jpg" width="1050" height="1400" loading="lazy" alt="My handwritten free writing about the Tenet poster, answering four questions: purpose, audience, and stakes; what makes it good; identity; and how it compares to what I was taught about good writing.">
-        <figcaption>My handwritten free writing about the poster.</figcaption>
-      </figure>
     </div>
+    <figure class="notesfig">
+      <img src="mp2-free-writing-notes.jpg" width="1050" height="1400" loading="lazy" alt="My handwritten free writing about the Tenet poster, answering four questions: purpose, audience, and stakes; what makes it good; identity; and how it compares to what I was taught about good writing.">
+      <figcaption>My handwritten free writing about the poster. Click the photo to see it full size.</figcaption>
+    </figure>
   </section>
 </div>
 
@@ -170,6 +178,29 @@
   <p>Michael Wong · ENC 1101 Composition I · Fall 2026 · Instructor: Professor Pamela Baker · Department of Writing and Rhetoric, University of Central Florida</p>
 </footer>
 
+<script>
+  // Click a photo to open it full size; click again, press Esc, or use Close to shut it.
+  (function () {
+    var box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.innerHTML = '<button type="button">Close</button><img alt="">';
+    document.body.appendChild(box);
+    var big = box.querySelector("img"), btn = box.querySelector("button"), last;
+    function close() { box.classList.remove("open"); document.body.style.overflow = ""; if (last) last.focus(); }
+    document.querySelectorAll(".sketchpics img, .notesfig img").forEach(function (img) {
+      img.classList.add("zoomable");
+      img.tabIndex = 0;
+      img.setAttribute("role", "button");
+      function open() { last = img; big.src = img.src; big.alt = img.alt; box.classList.add("open"); box.scrollTop = 0; document.body.style.overflow = "hidden"; btn.focus(); }
+      img.addEventListener("click", open);
+      img.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); } });
+    });
+    box.addEventListener("click", close);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && box.classList.contains("open")) close(); });
+  })();
+</script>
 <script src="book.js"></script>
 <script src="books.js?v=13"></script>
 </body>
