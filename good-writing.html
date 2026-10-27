@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Good Writing — Michael Wong</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%98%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="gate.js"></script>
+<style>
+  .textbox{
+    border:1px solid var(--border-strong,#C9CCC7); border-left:4px solid var(--accent);
+    border-radius:8px; background:var(--leaf);
+    padding:clamp(1.1rem,3vw,1.6rem) clamp(1.2rem,3.5vw,1.9rem);
+    margin:0 0 clamp(1.5rem,4vw,2.25rem);
+  }
+  .textbox h3{
+    font-family:var(--ui); font-size:.72rem; font-weight:600; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 .85rem;
+  }
+  .sketchsec{display:grid; gap:1.75rem; grid-template-columns:1fr; margin-top:clamp(1.5rem,4vw,2.25rem)}
+  @media (min-width:900px){ .sketchsec{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:start} }
+  .narr{margin:0}
+  .narr .tags{font-family:var(--ui); font-size:14pt; line-height:1.4; margin:0 0 .7rem; color:var(--accent)}
+  .narr p{font-family:var(--book); font-size:16pt; line-height:1.55; margin:0 0 1rem}
+  .narr p:last-child{margin-bottom:0}
+  .sketchpics{display:flex; flex-direction:column; gap:1.5rem}
+  .sketchpics figure{margin:0}
+  .sketchpics img{display:block; width:100%; height:auto; border-radius:6px; box-shadow:0 8px 22px rgba(0,0,0,.16)}
+  .sketchpics figcaption{font-family:var(--ui); font-size:.95rem; color:var(--ink-soft); margin-top:.5rem}
+  .notesfig{grid-column:1/-1; margin:0}
+  .notesfig img{display:block; width:100%; height:auto; border-radius:6px; box-shadow:0 8px 22px rgba(0,0,0,.16)}
+  .notesfig figcaption{font-family:var(--ui); font-size:.95rem; color:var(--ink-soft); margin-top:.5rem}
+  .zoomable{cursor:zoom-in}
+  .lightbox{position:fixed; inset:0; z-index:1000; background:rgba(0,0,0,.88); display:none; overflow:auto; cursor:zoom-out}
+  .lightbox.open{display:block}
+  .lightbox img{display:block; margin:0 auto; max-width:none; width:min(100%,1400px); height:auto; padding:16px; box-sizing:border-box}
+  .lightbox button{position:fixed; top:12px; right:12px; font-family:var(--ui); font-size:1rem; font-weight:600; padding:.55rem .9rem; border:0; border-radius:6px; background:#fff; color:#111; cursor:pointer}
+</style>
+</head>
+<body class="c-ochre">
+
+<nav class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html">Michael Wong</a>
+    <a class="tab" href="index.html">Home</a>
+    <span class="tabwrap"><a class="tab" href="project1.html">Major Project 1</a><span class="dropdown" data-books-menu></span></span>
+    <a class="tab" href="project2.html">Major Project 2</a>
+    <a class="tab" href="good-writing.html" aria-current="page">Good Writing</a>
+    <a class="tab" href="project3.html">What Changed</a>
+    <a class="tab" href="extras.html">Process Work</a>
+  </div>
+</nav>
+
+<header class="wrap masthead-grid">
+  <div>
+    <h1>Good Writing</h1>
+    <p class="official">Free Writing for MP2</p>
+    <p class="bio">My example of good everyday writing, the <em>Tenet</em> poster, and my handwritten notes about it.</p>
+  </div>
+  <dl class="metablock">
+    <dt>Project</dt><dd>Major Project 2</dd>
+    <dt>Course</dt><dd>ENC 1101 Composition I</dd>
+    <dt>Instructor</dt><dd>Professor Pamela Baker</dd>
+  </dl>
+</header>
+
+<div class="wrap">
+  <section class="sketchsec">
+    <div class="textbox narr">
+      <h3>Free Writing for MP2</h3>
+      <p class="tags"><strong>Variation across Contexts</strong></p>
+      <p>Free writing for MP2. This is my free writing about the poster for Christopher Nolan&rsquo;s <em>Tenet</em> (2020). It connects to the learning outcome Variation across Contexts. The poster uses very few words, and it uses layout, images, and double meanings like &ldquo;Time runs out&rdquo; to persuade its audience. These patterns are very different from academic writing, but they work in an advertising context. My notes also show how my own interest in film shapes what I think good writing is.</p>
+    </div>
+    <div class="sketchpics">
+      <figure>
+        <img src="mp2-tenet-poster.jpg" width="944" height="1400" loading="lazy" alt="The theatrical poster for Tenet. Two men rappel up the side of a tall building, and the whole image is tilted. Text: A film by Christopher Nolan. TENET. Time runs out. Written and directed by Christopher Nolan. Only in theaters.">
+        <figcaption>The <em>Tenet</em> poster (Warner Bros., 2020), my example of good writing.</figcaption>
+      </figure>
+    </div>
+    <figure class="notesfig">
+      <img src="mp2-free-writing-notes.jpg" width="1050" height="1400" loading="lazy" alt="My handwritten free writing about the Tenet poster, answering four questions: purpose, audience, and stakes; what makes it good; identity; and how it compares to what I was taught about good writing.">
+      <figcaption>My handwritten free writing about the poster. Click the photo to see it full size.</figcaption>
+    </figure>
+  </section>
+</div>
+
+<footer class="wrap sitefoot">
+  <p>Michael Wong · ENC 1101 Composition I · Fall 2026 · Instructor: Professor Pamela Baker · Department of Writing and Rhetoric, University of Central Florida</p>
+</footer>
+
+<script>
+  // Click a photo to open it full size; click again, press Esc, or use Close to shut it.
+  (function () {
+    var box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.innerHTML = '<button type="button">Close</button><img alt="">';
+    document.body.appendChild(box);
+    var big = box.querySelector("img"), btn = box.querySelector("button"), last;
+    function close() { box.classList.remove("open"); document.body.style.overflow = ""; if (last) last.focus(); }
+    document.querySelectorAll(".sketchpics img, .notesfig img").forEach(function (img) {
+      img.classList.add("zoomable");
+      img.tabIndex = 0;
+      img.setAttribute("role", "button");
+      function open() { last = img; big.src = img.src; big.alt = img.alt; box.classList.add("open"); box.scrollTop = 0; document.body.style.overflow = "hidden"; btn.focus(); }
+      img.addEventListener("click", open);
+      img.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); } });
+    });
+    box.addEventListener("click", close);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && box.classList.contains("open")) close(); });
+  })();
+</script>
+
+<script src="books.js?v=13"></script>
+</body>
+</html>
