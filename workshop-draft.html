@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MP2 Workshop Draft — Michael Wong</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%98%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="gate.js"></script>
+<style>
+  .textbox{
+    border:1px solid var(--border-strong,#C9CCC7); border-left:4px solid var(--accent);
+    border-radius:8px; background:var(--leaf);
+    padding:clamp(1.1rem,3vw,1.6rem) clamp(1.2rem,3.5vw,1.9rem);
+    margin:0 0 clamp(1.5rem,4vw,2.25rem);
+  }
+  .textbox h3{
+    font-family:var(--ui); font-size:.72rem; font-weight:600; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 .85rem;
+  }
+  .sketchsec{display:grid; gap:1.75rem; grid-template-columns:1fr; margin-top:clamp(1.5rem,4vw,2.25rem)}
+  @media (min-width:900px){ .sketchsec{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:start} }
+  .narr{margin:0}
+  .narr .tags{font-family:var(--ui); font-size:14pt; line-height:1.4; margin:0 0 .7rem; color:var(--accent)}
+  .narr p{font-family:var(--book); font-size:16pt; line-height:1.55; margin:0 0 1rem}
+  .narr p:last-child{margin-bottom:0}
+  .sketchpics{display:flex; flex-direction:column; gap:1.5rem}
+  .sketchpics figure{margin:0}
+  .sketchpics img{display:block; width:100%; height:auto; border-radius:6px; box-shadow:0 8px 22px rgba(0,0,0,.16)}
+  .sketchpics figcaption{font-family:var(--ui); font-size:.95rem; color:var(--ink-soft); margin-top:.5rem}
+  .notesfig{grid-column:1/-1; margin:0}
+  .notesfig img{display:block; width:100%; height:auto; border-radius:6px; box-shadow:0 8px 22px rgba(0,0,0,.16)}
+  .notesfig figcaption{font-family:var(--ui); font-size:.95rem; color:var(--ink-soft); margin-top:.5rem}
+  .zoomable{cursor:zoom-in}
+  .lightbox{position:fixed; inset:0; z-index:1000; background:rgba(0,0,0,.88); display:none; overflow:auto; cursor:zoom-out}
+  .lightbox.open{display:block}
+  .lightbox img{display:block; margin:0 auto; max-width:none; width:min(100%,1400px); height:auto; padding:16px; box-sizing:border-box}
+  .lightbox button{position:fixed; top:12px; right:12px; font-family:var(--ui); font-size:1rem; font-weight:600; padding:.55rem .9rem; border:0; border-radius:6px; background:#fff; color:#111; cursor:pointer}
+  .pfig{margin:0}
+  .pfig img{display:block;max-width:100%;max-height:22rem;margin:0 auto;border-radius:4px;box-shadow:0 6px 16px rgba(0,0,0,.14)}
+  .pfig figcaption{font-family:var(--ui);font-size:.85rem;color:var(--ink-soft);margin-top:.6rem}
+  .pagebody .bq,.flat .bq{margin-left:1.2rem;padding-left:.8rem;border-left:3px solid var(--accent)}
+  .pagebody .hdr,.flat .hdr{font-family:var(--ui);font-size:.85rem;color:var(--ink-soft)}
+  .pagebody .wc,.flat .wc{padding-left:1.5rem;text-indent:-1.5rem}
+  table.sr{width:100%;border-collapse:collapse;font-family:var(--ui);font-size:.95rem}
+  table.sr th,table.sr td{border:1px solid var(--border-strong,#C9CCC7);padding:.45rem .6rem;text-align:left}
+  table.sr td{height:3.2rem}
+  .flat .pfig{margin:1.5rem 0}
+</style>
+</head>
+<body class="c-ochre">
+
+<nav class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html">Michael Wong</a>
+    <a class="tab" href="index.html">Home</a>
+    <span class="tabwrap"><a class="tab" href="project1.html">Major Project 1</a><span class="dropdown" data-books-menu></span></span>
+    <span class="tabwrap"><a class="tab" href="project2.html" aria-current="page">Major Project 2</a><span class="dropdown"><a href="project2.html">All of it<span>The interview</span></a><a href="good-writing.html">Good Writing<span>Free writing: the <em>Tenet</em> poster</span></a><a href="class-meeting-oct-27.html">Class Meeting October 27<span>When I felt most empowered</span></a><a href="class-meeting-nov-10.html">Class Meeting November 10<span>Interview, agency, and failure</span></a><a href="genre-analysis-interview-questions.html">Genre Analysis/Interview Questions<span>Assignments as a genre and my 15 questions</span></a><a href="transcribing-quotes.html">Transcribing Quotes and Examples<span>Quotes from my interview with Ethan</span></a><a href="workshop-draft.html">Workshop Draft<span>Full workshop draft for peer review</span></a></span></span>
+    <a class="tab" href="project3.html">What Changed</a>
+    <a class="tab" href="extras.html">Process Work</a>
+  </div>
+</nav>
+
+<header class="wrap masthead-grid">
+  <div>
+    <h1>Major Project 2 Workshop Draft</h1>
+    <p class="official">Full Workshop Draft</p>
+    <p class="bio">My full workshop draft of Major Project 2: How Writing Works, for peer review. It uses my own writing life and my interview with my brother, Ethan Wong.</p>
+  </div>
+  <dl class="metablock">
+    <dt>Project</dt><dd>Major Project 2</dd>
+    <dt>Draft</dt><dd>Peer review workshop, 17 November 2026</dd>
+    <dt>Course</dt><dd>ENC 1101 Composition I</dd>
+    <dt>Instructor</dt><dd>Professor Pamela Baker</dd>
+  </dl>
+</header>
+
+<div class="wrap">
+  <div class="textbox narr" style="max-width:var(--measure);margin-bottom:1.5rem">
+    <h3>Framing Statement</h3>
+    <p>Full Workshop Draft of Major Project 2: How Writing Works. This draft uses my own writing life and my interview with my brother, Ethan Wong, an Industrial Engineering intern at Lockheed Martin. It argues that having agency is not always a good thing, and that good writing has to change so writers can get their specific point across.</p>
+    <p class="tags">Questions for my peer reviewers</p>
+    <p>1. Does my claim that agency is not always good make sense, or does it sound like I am against agency?</p><p>2. Is the link between my texts to my mom and Ethan&rsquo;s writing at work clear to you?</p>
+  </div>
+</div>
+
+<div class="wrap bookwrap">
+  <div class="bookrow">
+    <button class="pager pager-prev" type="button" aria-label="Previous page">&larr;</button>
+  <div class="book" id="book">
+    <div class="book-stage">
+      <div class="leafpage left"><div class="pagebody page-l"></div></div>
+      <div class="leafpage right"><div class="pagebody page-r"></div></div>
+      <div class="gutter"></div>
+      <div class="turner">
+        <div class="turner-face turner-front pagebody"></div>
+        <div class="turner-face turner-back pagebody"></div>
+      </div>
+      <div class="cover">
+        <div class="cover-face cover-front">
+          <p class="cover-title">Who&nbsp;Reads&nbsp;This?<br><span style="font-size:.6em">MP2 Workshop Draft</span></p>
+          <hr class="cover-rule">
+          <p class="cover-sub">Michael Wong<br>ENC 1101 &middot; Fall 2026</p>
+        </div>
+        <div class="cover-face cover-back"></div>
+      </div>
+    </div>
+    <div class="book-shadow"></div>
+  </div>
+    <button class="pager pager-next" type="button" aria-label="Next page">&rarr;</button>
+  </div>
+
+  <p class="counter" aria-live="polite">Cover</p>
+
+  <div class="actions">
+    <button class="btn ghost flatlink" type="button" aria-expanded="false"
+            data-open="Read the whole thing on one page"
+            data-close="Hide the one-page version">Read the whole thing on one page</button>
+    <a class="btn" href="Wong_MP2_Workshop_Draft.pdf" target="_blank" rel="noopener">View the PDF</a>
+    <a class="btn" href="Wong_MP2_Workshop_Draft.pdf" download>Download the PDF</a>
+    <a class="btn" href="Wong_MP2_Workshop_Draft.docx" download>Download the Word document</a>
+  </div>
+</div>
+
+<section class="wrap contents">
+  <h2>Contents</h2>
+  <ol class="toc">
+    <li><button type="button" data-spread="0"><span class="n">I</span><span class="t">Framing statement and questions</span><span class="dots"></span><span class="pg">p. 1</span></button></li>
+    <li><button type="button" data-spread="1"><span class="n">II</span><span class="t">Who Reads This, and What Do They Do Next?</span><span class="dots"></span><span class="pg">p. 3</span></button></li>
+    <li><button type="button" data-spread="3"><span class="n">III</span><span class="t">Background</span><span class="dots"></span><span class="pg">p. 7</span></button></li>
+    <li><button type="button" data-spread="4"><span class="n">IV</span><span class="t">Agency</span><span class="dots"></span><span class="pg">p. 9</span></button></li>
+    <li><button type="button" data-spread="7"><span class="n">V</span><span class="t">Giving Up Agency</span><span class="dots"></span><span class="pg">p. 16</span></button></li>
+    <li><button type="button" data-spread="11"><span class="n">VI</span><span class="t">Failure</span><span class="dots"></span><span class="pg">p. 23</span></button></li>
+    <li><button type="button" data-spread="13"><span class="n">VII</span><span class="t">Changing for the Reader</span><span class="dots"></span><span class="pg">p. 27</span></button></li>
+    <li><button type="button" data-spread="16"><span class="n">VIII</span><span class="t">Looking Back</span><span class="dots"></span><span class="pg">p. 34</span></button></li>
+    <li><button type="button" data-spread="18"><span class="n">IX</span><span class="t">Works Cited</span><span class="dots"></span><span class="pg">p. 38</span></button></li>
+    <li><button type="button" data-spread="19"><span class="n">X</span><span class="t">Technology Statement</span><span class="dots"></span><span class="pg">p. 39</span></button></li>
+  </ol>
+</section>
+
+<div class="spreads" hidden>
+  <div class="spread">
+    <div class="side-l"><p class="qnum">Framing statement</p><p>Full Workshop Draft of Major Project 2: How Writing Works. This draft uses my own writing life and my interview with my brother, Ethan Wong, an Industrial Engineering intern at Lockheed Martin. It argues that having agency is not always a good thing, and that good writing has to change so writers can get their specific point across.</p><p class="folio">1</p></div>
+    <div class="side-r"><p class="qnum">Questions for my peer reviewers</p><p>1. Does my claim that agency is not always good make sense, or does it sound like I am against agency?</p><p>2. Is the link between my texts to my mom and Ethan&rsquo;s writing at work clear to you?</p><p class="folio">2</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><p class="qnum">Workshop draft</p><h2>Who Reads This, and What Do They Do Next?</h2><p class="hdr">Michael Wong &middot; Professor Baker &middot; ENC 1101 &middot; 17 November 2026</p><p>The person I text the most is my mom. She is a native Spanish speaker, and even though most of my texts to her are in English, some things only make sense to her in Spanish. When she asks what I am up to and I am not doing anything important, I don&rsquo;t write &ldquo;nothing.&rdquo; I write &ldquo;webiando.&rdquo;</p><p class="folio">3</p></div>
+    <div class="side-r"><p>That one word tells her I am chilling, doing something low energy, and definitely not doing homework. No teacher would give me credit for that text, but my mom knows exactly what I mean.</p><p class="folio">4</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><p>Every reader has their own expectations, and writers have to change how they write to meet them. Writers also have to decide how much freedom to take while they do it, and having agency is not always a good thing. A writer with full freedom and nobody checking can get it wrong.</p><p class="folio">5</p></div>
+    <div class="side-r"><p>Good writing also has to change from reader to reader, because that change is what lets a writer get their specific point across. My older brother, Ethan Wong, learned both of these lessons at his internship at Lockheed Martin.</p><p class="folio">6</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><h2>Background</h2><p>Ethan is a junior at UCF majoring in Industrial Engineering. He has worked as an Industrial Engineering Intern at Lockheed Martin for about seven months, on a team that supports a production line building launch control hardware. He does time studies, fixes bottlenecks, and updates work instructions, the step-by-step documents that tell technicians how to build each part.</p><p class="folio">7</p></div>
+    <div class="side-r"><p>Before the internship, he thought work writing would be &ldquo;like... you know, lab reports from school&ldquo;. Instead, he writes emails, Teams messages, status reports, and work instructions, each for a different reader.</p><p class="folio">8</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><h2>Agency</h2><p>In our class, agency means the power to make your own choices about what to write and how to write it, even with rules, templates, and other people around you. Ethan told me his agency depends on what he is writing:</p><p class="folio">9</p></div>
+    <div class="side-r"><p class="bq">I can&rsquo;t just change a work instruction on my own. I have to draft a redline and then Dana and quality and sometimes the supervisor all review it and sign off. That can take, like, two or three weeks.... So I guess agency depends on the genre and who&rsquo;s watching.</p><p class="folio">10</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><p>Emails are the opposite. Nobody reviews them. Ethan&rsquo;s worst writing mistake came from one. Early in his first semester, he emailed the material handlers on a Friday that some kits would move to a new staging area &ldquo;starting next week.&rdquo; He meant the following Monday. They read it as that same week.</p><p class="folio">11</p></div>
+    <div class="side-r"><p>Parts moved two days early, a kitting cart ended up in the wrong spot, and a build shift lost about an hour looking for it. &ldquo;Nobody got hurt, nothing was damaged, but I felt awful,&rdquo; he said.</p><p class="folio">12</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><p>Compare that with a cable harness work instruction he fixed, where he had the least agency. One step said only to route the harness &ldquo;per drawing,&rdquo; and new techs kept getting it wrong. Ethan watched experienced techs, took photos, and wrote a redline that split that one step into five. It went through the slow sign-off process, and afterward, questions from the floor dropped a lot.</p><p class="folio">13</p></div>
+    <div class="side-r"><p>The document with the least freedom worked. The email with the most freedom failed.</p><p class="folio">14</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><p>Agency is not automatically good for a writer. The sign-offs that limit Ethan also put more eyes on his writing before anyone acts on it. As he put it, &ldquo;Being an intern doesn&rsquo;t mean you have no voice. It means you&rsquo;d better bring data with it.&rdquo; Writers with a lot of freedom have to build in their own check.</p><p class="folio">15</p></div>
+    <div class="side-r"><h2>Giving Up Agency</h2><p>My own story shows the other side. In my senior year of high school, my biology class had to write a paper on adaptation, limited to the Galápagos Islands. I wanted to write about how animals adapted near Chernobyl, because that was much more interesting to me. I wrote about the Galápagos, because my grade depended on it.</p><p class="folio">16</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><p>Nothing bad happened, but I never looked up how the animals in Chernobyl adapted. The question just stopped.</p><p class="folio">17</p></div>
+    <div class="side-r"><p>Chimamanda Ngozi Adichie, a Nigerian novelist, helps me explain what I lost. In her TED talk &ldquo;The Danger of a Single Story,&rdquo; she describes how, as a child who read mostly British and American books, she wrote stories about white characters who ate apples and played in snow, because she believed that was what stories had to be about.</p><p class="folio">18</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><p>She warns that &ldquo;power is the ability not just to tell the story of another person, but to make it the definitive story of that person&rdquo; (Adichie). My assignment made the Galápagos the definitive story of adaptation. My teacher held that power, and I gave up my agency because the grade was on the line.</p><p class="folio">19</p></div>
+    <div class="side-r"><p>In my genre analysis of school assignments (Figure 1), I wrote that instructions &ldquo;must be clear, because students are graded on what they say.&rdquo; The grade is what gives them their power.</p><p class="folio">20</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><figure class="pfig"><img src="mp2-genre-analysis.jpg" alt="Figure 1: My handwritten genre analysis of school assignments"><figcaption>Figure 1: My handwritten genre analysis of school assignments</figcaption></figure><p class="folio">21</p></div>
+    <div class="side-r"><p>Looking back, I could have tried Ethan&rsquo;s move: bring evidence and ask it as a question, like &ldquo;Could I compare Galápagos finches to animals near Chernobyl?&rdquo; Too little agency costs writers their own questions. Too much with no check can cost a whole shift an hour.</p><p class="folio">22</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><h2>Failure</h2><p>Collin Brooke and Allison Carr, two writing teachers, argue in &ldquo;Failure Can Be an Important Part of Writing Development&rdquo; that failing is part of how writers get better.</p><p class="folio">23</p></div>
+    <div class="side-r"><p>Expectations for writers change &ldquo;from year to year and sometimes course to course,&rdquo; and &ldquo;there is no way we can expect them to be able to intuit these shifting conditions&rdquo; (Brooke and Carr). Writers have to &ldquo;try, to fail, and to learn from those failures&rdquo; (Brooke and Carr).</p><p class="folio">24</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><p>That is how Ethan learned what the floor expected from him. A professor reading a lab report doesn&rsquo;t move parts the moment they finish reading. The material handlers do. His &ldquo;next week&rdquo; email showed him they need an exact day, time, and name. Now he writes, &ldquo;On Monday November tenth at six a.m. material handling moves kits A through D to Station Four. No room for confusion&ldquo;.</p><p class="folio">25</p></div>
+    <div class="side-r"><p>Brooke and Carr call failure &ldquo;an opportunity for growth,&rdquo; and Ethan&rsquo;s email is a clear case of it. Writers cannot guess what a new reader expects. Failing is often how we find out.</p><p class="folio">26</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><h2>Changing for the Reader</h2><p>Once Ethan learned that his readers expect different things, he started writing differently for each of them:</p><p class="folio">27</p></div>
+    <div class="side-r"><p class="bq">For Teams messages with my team, good writing is just being clear and fast, like, Station Four needs more kits by nine a.m., done. Nobody wants a paragraph. But for emails to managers... good writing means being more formal and putting the answer first.... For the weekly status report, good writing is being specific with numbers and dates, not vague.</p><p class="folio">28</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><p>Each version is good because it gets one specific point to one specific reader. His weekly status report (Figure 2) exists &ldquo;so Dana can make a decision in ninety seconds&ldquo;.</p><p class="folio">29</p></div>
+    <div class="side-r"><figure class="pfig"><table class="sr"><tr><th>Accomplishments</th><th>Next Week</th></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><th>Risks</th><th>Help Needed</th></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr></table><figcaption>Figure 2: My re-creation of Ethan&rsquo;s weekly status report, from his description (the real template is export controlled)</figcaption></figure><p class="folio">30</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><p>My texts to my mom work the same way. Our class calls mixing two languages in one piece of writing code-meshing. When I write &ldquo;webiando&rdquo; in an English text, I am code-meshing so my exact point gets across. &ldquo;Doing nothing&rdquo; would not carry all of what I mean, and the emojis I add show emotions faster than words (Figure 3). In a classroom, the same text would be marked wrong.</p><p class="folio">31</p></div>
+    <div class="side-r"><p>Being able to change is what lets writers say exactly what they mean to the person who needs to hear it.</p><p class="folio">32</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><figure class="pfig"><img src="mp2-mom-text.jpg" alt="Figure 3: My mom asks &ldquo;Que haces mijo?&rdquo; (&ldquo;What are you doing, son?&rdquo;), and I answer with &ldquo;webiando&rdquo; and an emoji"><figcaption>Figure 3: My mom asks &ldquo;Que haces mijo?&rdquo; (&ldquo;What are you doing, son?&rdquo;), and I answer with &ldquo;webiando&rdquo; and an emoji</figcaption></figure><p class="folio">33</p></div>
+    <div class="side-r"><h2>Looking Back</h2><p>Ethan&rsquo;s biggest lesson was simple: &ldquo;Write for the person who has to act on it, not for yourself&ldquo;. I used to write long introductions to show my teachers how much I knew, the same way Ethan did in school.</p><p class="folio">34</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><p>Brooke and Carr warn that students &ldquo;focus instead on what the teacher wants and simply hope to be able to get it right on the first try&rdquo; (Brooke and Carr). That is what I did with the Galápagos. I took no risk, and I learned nothing new.</p><p class="folio">35</p></div>
+    <div class="side-r"><p>This matters to student writers because school is only one place with one set of rules. Texting our families and writing at future jobs count too, and each is good when it works for its reader. More agency is not always better. Freedom works best when someone is checking, whether that is a reviewer, a manager, or our own data.</p><p class="folio">36</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><p>I still wonder whether Ethan ever code-meshes at work the way I do with our mom. From now on, before I write anything, I will ask Ethan&rsquo;s question: &ldquo;who reads this and what do they do next?&ldquo;. And I still want to know how the animals in Chernobyl adapted. This time, I plan to look it up.</p><p class="folio">37</p></div>
+    <div class="side-r"><h2>Works Cited</h2><p class="wc">Adichie, Chimamanda Ngozi. &ldquo;The Danger of a Single Story.&rdquo; <i>TED</i>, July 2009, www.ted.com/talks/chimamanda_ngozi_adichie_the_danger_of_a_single_story.</p><p class="wc">Brooke, Collin, and Allison Carr. &ldquo;Failure Can Be an Important Part of Writing Development.&rdquo; <i>Naming What We Know: Threshold Concepts of Writing Studies</i>, edited by Linda Adler-Kassner and Elizabeth Wardle, Utah State UP, 2015, pp. 62-64.</p><p class="wc">Wong, Ethan. Personal interview. Conducted by Michael Wong, 2026.</p><p class="folio">38</p></div>
+  </div>
+  <div class="spread">
+    <div class="side-l"><h2>Technology Statement</h2><p>I used these tools for this draft:</p><p><strong>Phone:</strong> I recorded my interview with Ethan and made the transcript.<br><strong>Pen and paper:</strong> I wrote my genre analysis, interview questions, and in-class writing by hand.<br><strong>Webcourses:</strong> I read the assignment and the course material by Brooke and Carr and by Adichie.<br><strong>Microsoft Word:</strong> I formatted the draft.</p><p class="folio">39</p></div>
+    <div class="side-r"></div>
+  </div>
+</div>
+
+<section class="wrap flat" hidden>
+  <p class="flat-label">Framing statement</p>
+  <p>Full Workshop Draft of Major Project 2: How Writing Works. This draft uses my own writing life and my interview with my brother, Ethan Wong, an Industrial Engineering intern at Lockheed Martin. It argues that having agency is not always a good thing, and that good writing has to change so writers can get their specific point across.</p>
+  <p class="flat-label">Questions for my peer reviewers</p>
+  <p>1. Does my claim that agency is not always good make sense, or does it sound like I am against agency?</p>
+  <p>2. Is the link between my texts to my mom and Ethan&rsquo;s writing at work clear to you?</p>
+  <p class="flat-label">Workshop draft</p>
+  <h2>Who Reads This, and What Do They Do Next?</h2>
+  <p class="hdr">Michael Wong &middot; Professor Baker &middot; ENC 1101 &middot; 17 November 2026</p>
+  <p>The person I text the most is my mom. She is a native Spanish speaker, and even though most of my texts to her are in English, some things only make sense to her in Spanish. When she asks what I am up to and I am not doing anything important, I don&rsquo;t write &ldquo;nothing.&rdquo; I write &ldquo;webiando.&rdquo; That one word tells her I am chilling, doing something low energy, and definitely not doing homework. No teacher would give me credit for that text, but my mom knows exactly what I mean.</p>
+  <p>Every reader has their own expectations, and writers have to change how they write to meet them. Writers also have to decide how much freedom to take while they do it, and having agency is not always a good thing. A writer with full freedom and nobody checking can get it wrong. Good writing also has to change from reader to reader, because that change is what lets a writer get their specific point across. My older brother, Ethan Wong, learned both of these lessons at his internship at Lockheed Martin.</p>
+  <h2>Background</h2>
+  <p>Ethan is a junior at UCF majoring in Industrial Engineering. He has worked as an Industrial Engineering Intern at Lockheed Martin for about seven months, on a team that supports a production line building launch control hardware. He does time studies, fixes bottlenecks, and updates work instructions, the step-by-step documents that tell technicians how to build each part. Before the internship, he thought work writing would be &ldquo;like... you know, lab reports from school&ldquo;. Instead, he writes emails, Teams messages, status reports, and work instructions, each for a different reader.</p>
+  <h2>Agency</h2>
+  <p>In our class, agency means the power to make your own choices about what to write and how to write it, even with rules, templates, and other people around you. Ethan told me his agency depends on what he is writing:</p>
+  <p class="bq">I can&rsquo;t just change a work instruction on my own. I have to draft a redline and then Dana and quality and sometimes the supervisor all review it and sign off. That can take, like, two or three weeks.... So I guess agency depends on the genre and who&rsquo;s watching.</p>
+  <p>Emails are the opposite. Nobody reviews them. Ethan&rsquo;s worst writing mistake came from one. Early in his first semester, he emailed the material handlers on a Friday that some kits would move to a new staging area &ldquo;starting next week.&rdquo; He meant the following Monday. They read it as that same week. Parts moved two days early, a kitting cart ended up in the wrong spot, and a build shift lost about an hour looking for it. &ldquo;Nobody got hurt, nothing was damaged, but I felt awful,&rdquo; he said.</p>
+  <p>Compare that with a cable harness work instruction he fixed, where he had the least agency. One step said only to route the harness &ldquo;per drawing,&rdquo; and new techs kept getting it wrong. Ethan watched experienced techs, took photos, and wrote a redline that split that one step into five. It went through the slow sign-off process, and afterward, questions from the floor dropped a lot. The document with the least freedom worked. The email with the most freedom failed.</p>
+  <p>Agency is not automatically good for a writer. The sign-offs that limit Ethan also put more eyes on his writing before anyone acts on it. As he put it, &ldquo;Being an intern doesn&rsquo;t mean you have no voice. It means you&rsquo;d better bring data with it.&rdquo; Writers with a lot of freedom have to build in their own check.</p>
+  <h2>Giving Up Agency</h2>
+  <p>My own story shows the other side. In my senior year of high school, my biology class had to write a paper on adaptation, limited to the Galápagos Islands. I wanted to write about how animals adapted near Chernobyl, because that was much more interesting to me. I wrote about the Galápagos, because my grade depended on it. Nothing bad happened, but I never looked up how the animals in Chernobyl adapted. The question just stopped.</p>
+  <p>Chimamanda Ngozi Adichie, a Nigerian novelist, helps me explain what I lost. In her TED talk &ldquo;The Danger of a Single Story,&rdquo; she describes how, as a child who read mostly British and American books, she wrote stories about white characters who ate apples and played in snow, because she believed that was what stories had to be about. She warns that &ldquo;power is the ability not just to tell the story of another person, but to make it the definitive story of that person&rdquo; (Adichie). My assignment made the Galápagos the definitive story of adaptation. My teacher held that power, and I gave up my agency because the grade was on the line. In my genre analysis of school assignments (Figure 1), I wrote that instructions &ldquo;must be clear, because students are graded on what they say.&rdquo; The grade is what gives them their power.</p>
+  <figure class="pfig"><img src="mp2-genre-analysis.jpg" alt="Figure 1: My handwritten genre analysis of school assignments"><figcaption>Figure 1: My handwritten genre analysis of school assignments</figcaption></figure>
+  <p>Looking back, I could have tried Ethan&rsquo;s move: bring evidence and ask it as a question, like &ldquo;Could I compare Galápagos finches to animals near Chernobyl?&rdquo; Too little agency costs writers their own questions. Too much with no check can cost a whole shift an hour.</p>
+  <h2>Failure</h2>
+  <p>Collin Brooke and Allison Carr, two writing teachers, argue in &ldquo;Failure Can Be an Important Part of Writing Development&rdquo; that failing is part of how writers get better. Expectations for writers change &ldquo;from year to year and sometimes course to course,&rdquo; and &ldquo;there is no way we can expect them to be able to intuit these shifting conditions&rdquo; (Brooke and Carr). Writers have to &ldquo;try, to fail, and to learn from those failures&rdquo; (Brooke and Carr).</p>
+  <p>That is how Ethan learned what the floor expected from him. A professor reading a lab report doesn&rsquo;t move parts the moment they finish reading. The material handlers do. His &ldquo;next week&rdquo; email showed him they need an exact day, time, and name. Now he writes, &ldquo;On Monday November tenth at six a.m. material handling moves kits A through D to Station Four. No room for confusion&ldquo;. Brooke and Carr call failure &ldquo;an opportunity for growth,&rdquo; and Ethan&rsquo;s email is a clear case of it. Writers cannot guess what a new reader expects. Failing is often how we find out.</p>
+  <h2>Changing for the Reader</h2>
+  <p>Once Ethan learned that his readers expect different things, he started writing differently for each of them:</p>
+  <p class="bq">For Teams messages with my team, good writing is just being clear and fast, like, Station Four needs more kits by nine a.m., done. Nobody wants a paragraph. But for emails to managers... good writing means being more formal and putting the answer first.... For the weekly status report, good writing is being specific with numbers and dates, not vague.</p>
+  <p>Each version is good because it gets one specific point to one specific reader. His weekly status report (Figure 2) exists &ldquo;so Dana can make a decision in ninety seconds&ldquo;.</p>
+  <figure class="pfig"><table class="sr"><tr><th>Accomplishments</th><th>Next Week</th></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><th>Risks</th><th>Help Needed</th></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr></table><figcaption>Figure 2: My re-creation of Ethan&rsquo;s weekly status report, from his description (the real template is export controlled)</figcaption></figure>
+  <p>My texts to my mom work the same way. Our class calls mixing two languages in one piece of writing code-meshing. When I write &ldquo;webiando&rdquo; in an English text, I am code-meshing so my exact point gets across. &ldquo;Doing nothing&rdquo; would not carry all of what I mean, and the emojis I add show emotions faster than words (Figure 3). In a classroom, the same text would be marked wrong. Being able to change is what lets writers say exactly what they mean to the person who needs to hear it.</p>
+  <figure class="pfig"><img src="mp2-mom-text.jpg" alt="Figure 3: My mom asks &ldquo;Que haces mijo?&rdquo; (&ldquo;What are you doing, son?&rdquo;), and I answer with &ldquo;webiando&rdquo; and an emoji"><figcaption>Figure 3: My mom asks &ldquo;Que haces mijo?&rdquo; (&ldquo;What are you doing, son?&rdquo;), and I answer with &ldquo;webiando&rdquo; and an emoji</figcaption></figure>
+  <h2>Looking Back</h2>
+  <p>Ethan&rsquo;s biggest lesson was simple: &ldquo;Write for the person who has to act on it, not for yourself&ldquo;. I used to write long introductions to show my teachers how much I knew, the same way Ethan did in school. Brooke and Carr warn that students &ldquo;focus instead on what the teacher wants and simply hope to be able to get it right on the first try&rdquo; (Brooke and Carr). That is what I did with the Galápagos. I took no risk, and I learned nothing new.</p>
+  <p>This matters to student writers because school is only one place with one set of rules. Texting our families and writing at future jobs count too, and each is good when it works for its reader. More agency is not always better. Freedom works best when someone is checking, whether that is a reviewer, a manager, or our own data. I still wonder whether Ethan ever code-meshes at work the way I do with our mom. From now on, before I write anything, I will ask Ethan&rsquo;s question: &ldquo;who reads this and what do they do next?&ldquo;. And I still want to know how the animals in Chernobyl adapted. This time, I plan to look it up.</p>
+  <h2>Works Cited</h2><p class="wc">Adichie, Chimamanda Ngozi. &ldquo;The Danger of a Single Story.&rdquo; <i>TED</i>, July 2009, www.ted.com/talks/chimamanda_ngozi_adichie_the_danger_of_a_single_story.</p><p class="wc">Brooke, Collin, and Allison Carr. &ldquo;Failure Can Be an Important Part of Writing Development.&rdquo; <i>Naming What We Know: Threshold Concepts of Writing Studies</i>, edited by Linda Adler-Kassner and Elizabeth Wardle, Utah State UP, 2015, pp. 62-64.</p><p class="wc">Wong, Ethan. Personal interview. Conducted by Michael Wong, 2026.</p>
+  <h2>Technology Statement</h2><p>I used these tools for this draft:</p><p><strong>Phone:</strong> I recorded my interview with Ethan and made the transcript.<br><strong>Pen and paper:</strong> I wrote my genre analysis, interview questions, and in-class writing by hand.<br><strong>Webcourses:</strong> I read the assignment and the course material by Brooke and Carr and by Adichie.<br><strong>Microsoft Word:</strong> I formatted the draft.</p>
+</section>
+
+<footer class="wrap sitefoot">
+  <p>Michael Wong &middot; ENC 1101 Composition I &middot; Fall 2026 &middot; Instructor: Professor Pamela Baker &middot; Department of Writing and Rhetoric, University of Central Florida</p>
+</footer>
+
+<script src="book.js"></script>
+<script src="books.js?v=13"></script>
+</body>
+</html>
