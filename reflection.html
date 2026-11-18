@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reflecting On &amp; Revising Your MP2 — Michael Wong</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%98%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="gate.js"></script>
+<style>
+  .textbox{
+    border:1px solid var(--border-strong,#C9CCC7); border-left:4px solid var(--accent);
+    border-radius:8px; background:var(--leaf);
+    padding:clamp(1.1rem,3vw,1.6rem) clamp(1.2rem,3.5vw,1.9rem);
+    margin:0 0 clamp(1.5rem,4vw,2.25rem);
+  }
+  .textbox h3{
+    font-family:var(--ui); font-size:.72rem; font-weight:600; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 .85rem;
+  }
+  .sketchsec{display:grid; gap:1.75rem; grid-template-columns:1fr; margin-top:clamp(1.5rem,4vw,2.25rem)}
+  @media (min-width:900px){ .sketchsec{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:start} }
+  .narr{margin:0}
+  .narr .tags{font-family:var(--ui); font-size:14pt; line-height:1.4; margin:0 0 .7rem; color:var(--accent)}
+  .narr p{font-family:var(--book); font-size:16pt; line-height:1.55; margin:0 0 1rem}
+  .narr p:last-child{margin-bottom:0}
+  .sketchpics{display:flex; flex-direction:column; gap:1.5rem}
+  .sketchpics figure{margin:0}
+  .sketchpics img{display:block; width:100%; height:auto; border-radius:6px; box-shadow:0 8px 22px rgba(0,0,0,.16)}
+  .sketchpics figcaption{font-family:var(--ui); font-size:.95rem; color:var(--ink-soft); margin-top:.5rem}
+  .notesfig{grid-column:1/-1; margin:0}
+  .notesfig img{display:block; width:100%; height:auto; border-radius:6px; box-shadow:0 8px 22px rgba(0,0,0,.16)}
+  .notesfig figcaption{font-family:var(--ui); font-size:.95rem; color:var(--ink-soft); margin-top:.5rem}
+  .zoomable{cursor:zoom-in}
+  .lightbox{position:fixed; inset:0; z-index:1000; background:rgba(0,0,0,.88); display:none; overflow:auto; cursor:zoom-out}
+  .lightbox.open{display:block}
+  .lightbox img{display:block; margin:0 auto; max-width:none; width:min(100%,1400px); height:auto; padding:16px; box-sizing:border-box}
+  .lightbox button{position:fixed; top:12px; right:12px; font-family:var(--ui); font-size:1rem; font-weight:600; padding:.55rem .9rem; border:0; border-radius:6px; background:#fff; color:#111; cursor:pointer}
+  .pfig{margin:0}
+  .pfig img{display:block;max-width:100%;max-height:22rem;margin:0 auto;border-radius:4px;box-shadow:0 6px 16px rgba(0,0,0,.14)}
+  .pfig figcaption{font-family:var(--ui);font-size:.85rem;color:var(--ink-soft);margin-top:.6rem}
+  .pagebody .bq,.flat .bq{margin-left:1.2rem;padding-left:.8rem;border-left:3px solid var(--accent)}
+  .pagebody .hdr,.flat .hdr{font-family:var(--ui);font-size:.85rem;color:var(--ink-soft)}
+  .pagebody .wc,.flat .wc{padding-left:1.5rem;text-indent:-1.5rem;overflow-wrap:anywhere}
+  .pagebody .wc{font-size:.86em;margin-bottom:.5em}
+  table.sr{width:100%;border-collapse:collapse;font-family:var(--ui);font-size:.95rem}
+  table.sr th,table.sr td{border:1px solid var(--border-strong,#C9CCC7);padding:.45rem .6rem;text-align:left}
+  table.sr td{height:3.2rem}
+  .flat .pfig{margin:1.5rem 0}
+</style>
+</head>
+<body class="c-ochre">
+
+<nav class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html">Michael Wong</a>
+    <a class="tab" href="index.html">Home</a>
+    <span class="tabwrap"><a class="tab" href="project1.html">Major Project 1</a><span class="dropdown" data-books-menu></span></span>
+    <span class="tabwrap"><a class="tab" href="project2.html" aria-current="page">Major Project 2</a><span class="dropdown"><a href="project2.html">All of it<span>The interview</span></a><a href="good-writing.html">Good Writing<span>Free writing: the <em>Tenet</em> poster</span></a><a href="class-meeting-oct-27.html">Class Meeting October 27<span>When I felt most empowered</span></a><a href="class-meeting-nov-10.html">Class Meeting November 10<span>Interview, agency, and failure</span></a><a href="genre-analysis-interview-questions.html">Genre Analysis/Interview Questions<span>Assignments as a genre and my 15 questions</span></a><a href="transcribing-quotes.html">Transcribing Quotes and Examples<span>Quotes from my interview with Ethan</span></a><a href="workshop-draft.html">Workshop Draft<span>Full workshop draft for peer review</span></a><a href="reflection.html">Reflecting On &amp; Revising Your MP2<span>Revised draft with my comments</span></a></span></span>
+    <a class="tab" href="project3.html">What Changed</a>
+    <a class="tab" href="extras.html">Process Work</a>
+  </div>
+</nav>
+
+<header class="wrap masthead-grid">
+  <div>
+    <h1>Reflecting On &amp; Revising Your MP2: How Writing Works</h1>
+    <p class="official">Revised Draft with Comments</p>
+    <p class="bio">My revised MP2 draft in Word, with my highlights, comments, and revisions. The comments explain my goals, my favorite points, the course readings I build on, and the revisions I made from peer review.</p>
+  </div>
+  <dl class="metablock">
+    <dt>Project</dt><dd>Major Project 2</dd>
+    <dt>Course</dt><dd>ENC 1101 Composition I</dd>
+    <dt>Instructor</dt><dd>Professor Pamela Baker</dd>
+  </dl>
+</header>
+
+<div class="wrap">
+  <div class="textbox narr" style="max-width:var(--measure);margin-bottom:1.5rem">
+    <h3>Open the Word Document</h3>
+    <p>The draft opens in Word on OneDrive, so all of my highlights and comments stay visible. Sign in with a UCF account if it asks.</p>
+    <div class="actions"><a class="btn" href="https://ucf-my.sharepoint.com/:w:/g/personal/mi508744_ucf_edu/IQDXIv7Eyk5WR4d2fzsSBkoUAWGednlEFtP7Y_o9J4yhyzs?e=Tu7zDP" target="_blank" rel="noopener">Open the Word document</a></div>
+  </div>
+</div>
+
+<footer class="wrap sitefoot">
+  <p>Michael Wong &middot; ENC 1101 Composition I &middot; Fall 2026 &middot; Instructor: Professor Pamela Baker &middot; Department of Writing and Rhetoric, University of Central Florida</p>
+</footer>
+
+<script src="book.js"></script>
+<script src="books.js?v=13"></script>
+</body>
+</html>
