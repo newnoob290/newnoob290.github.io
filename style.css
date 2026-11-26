@@ -425,6 +425,7 @@ body.c-moss{--accent:var(--moss)}
 }
 .tabwrap::after{content:"";position:absolute;top:100%;left:0;width:100%;height:.6rem}
 .tabwrap:hover>.dropdown,.tabwrap:focus-within>.dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.tabwrap>.dropdown{max-height:calc(100vh - 5rem);overflow-y:auto;overscroll-behavior:contain}
 .tabwrap>.dropdown a{
   display:block;padding:.5rem .65rem;border-radius:6px;text-decoration:none;
   font-family:var(--ui);font-size:.92rem;font-weight:500;color:var(--ink);
