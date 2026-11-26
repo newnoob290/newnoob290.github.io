@@ -454,3 +454,8 @@ body.c-moss{--accent:var(--moss)}
 .aibanner strong{display:block;font-family:var(--ui);font-size:1.25rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#C81E1E}
 .aibanner p{margin:.4rem 0 0;font-family:var(--ui);font-size:1rem}
 .aibanner a{color:#7A0E0E;font-weight:700}
+.tabwrap>.dropdown a.aitab{color:#C81E1E;background:#FDECEC;border-left:4px solid #C81E1E;text-decoration:line-through;text-decoration-thickness:1px}
+.tabwrap>.dropdown a.aitab span{color:#9B1C1C;text-decoration:none}
+.tabwrap>.dropdown a.aitab .aiflag{text-decoration:none;color:#fff}
+.tabwrap>.dropdown a.aitab:hover,.tabwrap>.dropdown a.aitab:focus-visible{background:#F9D6D6;color:#C81E1E}
+.gwlink.aitab a{color:#C81E1E;text-decoration:line-through}
