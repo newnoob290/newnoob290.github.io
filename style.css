@@ -445,3 +445,12 @@ body.c-moss{--accent:var(--moss)}
 .sketchfig{margin:0;max-width:560px}
 .sketchfig img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 8px 22px rgba(0,0,0,.16)}
 .sketchfig figcaption{font-family:var(--ui);font-size:.95rem;color:var(--ink-soft);margin-top:.6rem}
+
+/* ---------- unauthorized AI use flag ---------- */
+.aiflag{display:inline-block;font-style:normal;font-family:var(--ui);font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:#C81E1E;border-radius:4px;padding:.12rem .45rem;margin-left:.45rem;vertical-align:middle}
+.aiflag.inline{font-size:.72rem}
+.tabwrap>.dropdown a .aiflag{display:inline-block;color:#fff}
+.aibanner{border:2px solid #C81E1E;border-left:8px solid #C81E1E;background:#FDECEC;color:#7A0E0E;border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0 0}
+.aibanner strong{display:block;font-family:var(--ui);font-size:1.25rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#C81E1E}
+.aibanner p{margin:.4rem 0 0;font-family:var(--ui);font-size:1rem}
+.aibanner a{color:#7A0E0E;font-weight:700}
